@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #FDF8F3;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 40px;
+    color: #073B4C;
+}
+
+.logo h3 {
+    font-size: 26px;
+}
+
+.logo span {
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    gap: 120px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #073B4C;
+}
+
+.perfil {
+    width: 60px;
+    height: 60px;
+
+    border: 3px solid #C7A977;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil i {
+    font-size: 25px;
+}
+
+/* HERO */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 50px 80px;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 72px;
+    color: #073B4C;
+    line-height: 1.1;
+
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+
+    margin-bottom: 30px;
+}
+
+.hero-text p {
+    font-size: 24px;
+    color: #6F6F6F;
+
+    max-width: 650px;
+
+    margin-bottom: 40px;
+}
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    gap: 20px;
+
+    margin-bottom: 60px;
+}
+
+.btn-primario {
+    padding: 18px 40px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #073B4C;
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-primario:hover {
+    transform: translateY(-3px);
+}
+
+.btn-secondario {
+    padding: 18px 40px;
+
+    border: 2px solid #D4B483;
+    border-radius: 15px;
+
+    background: transparent;
+
+    font-size: 20px;
+    color: #073B4C;
+
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-secondario:hover {
+    background: #D4B483;
+}
+
+/* BENEFÍCIOS */
+
+.beneficios {
+    display: flex;
+    gap: 70px;
+
+    margin-bottom: 60px;
+}
+
+.item {
+    text-align: center;
+}
+
+.item i {
+    font-size: 55px;
+    color: #156082;
+
+    margin-bottom: 15px;
+}
+
+.item h4 {
+    color: #156082;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* CARD */
+
+.card-info {
+    width: 480px;
+    height: 7rem;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #EFDDBF;
+
+    padding: 25px;
+
+    border-radius: 20px;
+    margin: 0;
+    font-size: 20px;
+    color: #073B4C;
+    margin-left: 5rem;
+
+}
+
+.card-info i {
+    font-size: 40px;
+    color: #D9923B;
+}
+
+
+
+/* IMAGEM */
+
+.hero-imagem {
+    flex: 1;
+    border-radius: none;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+}
+
+.menu {
+    position: relative;
+    text-decoration: none;
+    color: #222;
+    padding-bottom: 20px;
+}
+
+.menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+    background: #156082;
+
+    transform: scaleX(0);
+    transition: transform .5s ease;
+}
+
+.menu:hover {
+    color: #D4B483;
+}
+
+.menu:hover::after {
+    transform: scaleX(0.75);
+}
+
+.footer {
+    background-color: #eee1d2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+
+}
+
+.texto-descrição {
+    padding: 20px;
+    font-size: larger;
+}
+
+.redes {
+    display: flex;
+    gap: 40px;
+    font-size: 3rem;
+    padding: 20px;
+}
+
+.footer-nav {
+    padding: 40px;
+    display: grid;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.titulo-nav {
+    padding-left: 100px;
+    font-size: 26px;
+
+}
+
+.links {
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    gap: 70px;
+    font-size: larger;
+    width: 20rem;
+}
+#insta:hover{
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text
+}
+#whats:hover{
+    color:rgb(3, 145, 3)
+}
+#face:hover{
+    color: #076e96;
+}
+
+
+.links a {
+    text-decoration: none;
+    color: #111;
+
+    transition: .3s;
+}
+
+.links a:hover {
+    color: #0A5673;
+}
+
+
+.footer-app {
+    padding: 40px;
+}
+
+/* LINHA */
+
+.linha {
+    margin-top: 60px;
+    width: 1.5px;
+    background: #222;
+    min-height: 220px;
+}
+
+/* APP */
+
+.footer-app {
+    text-align: center;
+}
+
+.descricao-app {
+    font-size: larger;
+    margin-top: 20px;
+}
+
+.footer-app p {
+    font-size: 24px;
+    line-height: 40px;
+    color: #111;
+    margin-bottom: 35px;
+}
+
+.botoes-app {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.store {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: #18314F;
+    color: #fff;
+
+    padding: 10px 15px;
+
+    border-radius: 15px;
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.store:hover {
+    transform: translateY(-4px);
+}
+
+.store i {
+    font-size: 40px;
+}
+
+.store small {
+    display: block;
+    font-size: 14px;
+}
+
+.store span {
+    font-size: 28px;
+}
+
+/* Copyright */
+
+.copyright {
+    background-color: #eee1d2;
+    display: flex;
+    justify-content: center;
+}
+
+.footer1 {
+    display: block;
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+
+.paragrafo1 {
+    display: block;
+    margin-top: 3rem;
+
+
+}
+
+
+
+
+
+/* RESPONSIVO */
+
+@media(max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+
+    .hero {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 50px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+
+    .beneficios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-info {
+        width: 100%;
+    }
+}
