@@ -1,0 +1,423 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#F8F2EC;
+    color:#16384A;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-decoration: none;
+    padding:20px 60px;
+    border-bottom:1px solid #ccc;
+    font-weight: 700;
+}
+ 
+.logo{
+    display:flex;
+    align-items:center;
+    text-decoration: none;
+    gap:10px;
+    font-size: 90px;
+}
+ 
+.logo i{
+    font-size:40px;
+    color:#073B4C;
+}
+ 
+.logo h3{
+    font-size:26px;
+}
+ 
+.logo span{
+    font-size:18px;
+}
+ 
+
+.menu {
+    padding: 2rem;
+    position: relative;
+    text-decoration: none;
+    color: #222;
+    padding-bottom: 20px;
+    font-size: 22px;
+}
+
+.menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #156082;
+    transform: scaleX(0);
+    transition: transform .5s ease;
+}
+
+.menu:hover {
+    color: #D4B483;
+}
+
+.menu:hover::after {
+    transform: scaleX(0.75);
+}
+.perfil{
+    width:60px;
+    height:60px;
+    border:3px solid #C7A977;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+ 
+.perfil i{
+    font-size:25px;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* SOBRE */
+
+.sobre{
+    padding:70px 0;
+}
+
+.sobre .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
+
+.sobre-texto{
+    flex:1;
+}
+
+.sobre-texto h2{
+    font-size:4.8rem;
+    color:#1C556C;
+    margin-bottom:50px;
+}
+
+.sobre-texto p{
+    font-size:2rem;
+    line-height:1.6;
+    color:#222;
+    margin-bottom:50px;
+}
+
+.sobre-imagem{
+    flex:1;
+}
+
+.sobre-imagem img{
+    width:100%;
+    border-radius:35px;
+    display:block;
+}
+
+/* DIFERENCIAIS */
+
+.diferenciais{
+    padding:20px 0 80px;
+}
+
+.cards{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+/* CARD */
+
+.card{
+    width:250px;
+    min-height:330px;
+    background:#ECECEC;
+    border:2px solid #16384A;
+    border-radius:35px;
+    padding:35px 25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 25px rgba(0,0,0,.15);
+}
+
+.card i{
+    font-size:45px;
+    color:#16384A;
+    margin-bottom:30px;
+}
+
+.card h3{
+    font-size:1.8rem;
+    margin-bottom:20px;
+}
+
+.card p{
+    font-size:1.1rem;
+    color:#2b4a58;
+    line-height:1.5;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+}
+
+.sobre{
+    padding:50px 0;
+}
+
+.sobre-texto h2{
+    font-size:3rem;
+}
+
+.sobre-texto p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.card{
+    width:100%;
+    max-width:340px;
+}
+
+.card i{
+    font-size:60px;
+}
+
+.card h3{
+    font-size:1.5rem;
+}
+
+.card p{
+    font-size:1rem;
+}
+
+}
+
+/* Footer */
+.rodape{
+    margin-top:25px;
+    background:#eedfcd;
+    padding:50px 60px 25px;
+}
+
+.rodape-superior{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    gap:40px;
+}
+
+.rodape-logo a{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    text-decoration:none;
+}
+
+.rodape-logo img{
+    width:60px;
+}
+
+.rodape-logo .logo-texto{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+}
+
+.rodape-logo .logo-texto span:first-child{
+    font-size:24px;
+    font-weight:bold;
+    color:#163547;
+}
+
+.rodape-logo .logo-texto span:last-child{
+    color:#356f9d;
+    font-size:15px;
+}
+
+.rodape-redes{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+}
+
+.rodape-redes a{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:#163547;
+    font-size:22px;
+    transition:.3s;
+}
+
+.rodape-redes a:hover{
+    background:#356f9d;
+    color:white;
+    transform:translateY(-4px);
+}
+
+.rodape-app{
+    text-align:right;
+}
+
+.rodape-app h3{
+    margin-bottom:8px;
+    color:#163547;
+}
+
+.rodape-app p{
+    font-size:14px;
+    margin-bottom:18px;
+    color:#555;
+}
+
+.botoes-app{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
+}
+
+.store{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:white;
+    background:#163547;
+    padding:12px 18px;
+    border-radius:14px;
+    transition:.3s;
+}
+
+.store:hover{
+    background:#356f9d;
+    transform:translateY(-3px);
+}
+
+.store i{
+    font-size:26px;
+}
+
+.store small{
+    display:block;
+    font-size:11px;
+}
+
+.store span{
+    font-size:15px;
+    font-weight:bold;
+}
+
+.linha{
+    width:100%;
+    height:1px;
+    background:rgba(22,53,71,.15);
+    margin:35px 0 20px;
+}
+
+.copyright{
+    text-align:center;
+    color:#163547;
+    font-size:14px;
+}
+
+/* Footer - mobile */
+@media (max-width: 768px) {
+
+    .rodape {
+        padding: 40px 25px 25px;
+    }
+
+    .rodape-superior {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .rodape-logo a {
+        justify-content: center;
+    }
+
+    .rodape-redes {
+        justify-content: center;
+    }
+
+    .rodape-app {
+        text-align: center;
+    }
+
+    .botoes-app {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .hamburguer{
+        display: flex;
+        margin-right: 35rem;
+        width: 5rem;
+        
+        height: 2rem;
+    }
+    header .btn-mb{
+        display: flex;
+        width: 3rem;
+        border-radius: 0.80rem;
+        height: 3rem;
+        border: none;
+        justify-content: center;
+        align-items: center;
+    }
+    header .hamburguer #botaoclick{
+        height: 1rem;
+        width: 10rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

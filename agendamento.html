@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Agendamento - Loop Lavanderia </title>
+
+    <link rel="stylesheet" href="agendamento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="icon" type="image/png" href="imgs/logo.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+     <!-- Modal de confirmação -->
+<div id="modalConfirmacao" class="modal oculto">
+    <div class="modal-conteudo">
+        <button class="fechar-modal" id="fecharModal">
+            <i class="bi bi-x-lg"></i>
+        </button>
+        
+        <h2>Agendado com sucesso.</h2>
+        <p>
+            Tudo certo! Sua coleta já foi agendada.<br>
+            Agora é só acompanhar em
+            <strong>"Meus pedidos"</strong>.
+        </p>
+
+        <a href="Pedidos.html" class="btn-modal">
+            Meus pedidos
+        </a>
+    </div>
+</div>
+
+    <div class="pagina-agendamento">
+        <header>
+            <div class="hamburguer">
+                <button type="button" class="btn-mb"><i class="fa-solid fa-bars" id="botaoclick"></i></button></div>
+        <div class="logo">
+            <a href="index.html" class="logo">
+                <div class="logo">
+                    <p><img src="https://i.ibb.co/5hFzRjt0/logo.png" alt="logo" border="0" width="50rem"></p>
+                    <h3>Loop <br>Lavanderia</h3>
+                </div>
+            </a>
+        </div>
+
+        <nav class="menuclick">
+            <a href="como-funciona.html" class="menu">Como funciona</a>
+            <a href="nossos-servicos.html" class="menu">Serviços</a>
+            <a href="localizacao.html" class="menu">Lavanderias próximas</a>
+            <a href="agendamento.html" class="menu">Agendamento</a>
+            <a href="sobre-nos.html" class="menu">Sobre nós</a>
+        </nav>
+
+        <div class="perfil">
+            <i class="bi bi-person-circle"></i>
+        </div>
+    </header>
+
+        <main class="conteudo">
+
+            <h1 class="titulo">
+                <i class="bi bi-calendar3"></i> Agendamento </h1>
+
+            <section class="agendamento">
+
+                <img src="https://i.ibb.co/kVd6d795/planta-decorativa.png"alt="Planta decorativa" class="planta planta-esquerda" />
+                <section class="formulario">
+
+                    <form id="formAgendamento">
+                        <div class="grupo-campos">
+
+                            <div class="campo">
+                                <label for="data"> 1. Data da coleta </label>
+                                    <input type="date" id="data" name="data" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="horario"> 2. Horário </label>
+                                    <input type="time" id="horario" name="horario" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="servico"> 3. Tipo de serviço </label>
+
+                                    <select id="servico" name="servico" required>
+                                        <option value=""> Selecione um serviço </option>
+                                    </select>
+                            </div>
+
+                            <div class="campo">
+                                <label for="cep"> 4. CEP </label>
+
+                                <div class="input-icone">
+                                    <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000">
+                                    <i class="bi bi-search"></i>
+                                </div>
+                            </div>
+
+                            <div class="campo">
+                                <label for="endereco"> 5. Endereço </label>
+
+                                <div class="input-icone">
+                                    <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço"
+                                        required>
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                            </div>
+
+                            <div class="campo campo-inteiro">
+                                <label for="observacoes"> 6. Observações (opcional) </label>
+
+                                <textarea id="observacoes" name="observacoes" rows="5"
+                                    placeholder="Alguma informação importante para a coleta?"></textarea>
+                            </div>
+                        </div>
+
+                        <div id="mensagemFormulario" class="mensagem-formulario">
+                        </div>
+
+                        <div class="area-botao">
+                            <button type="submit" class="botao botao-agendar">
+                                <i class="bi bi-check-circle"></i> Agendar coleta
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <aside class="resumo">
+                    <h2><i class="bi bi-basket2"></i> Resumo do pedido </h2>
+
+                    <div class="resumo-conteudo">
+                        <div class="item-resumo">
+                            <span> Serviço </span>
+                            <strong id="resumoServico"> Não selecionado </strong>
+                        </div>
+
+                        <div class="item-resumo">
+                            <span> Data </span>
+                            <strong id="resumoData"> -- </strong>
+                        </div>
+
+                        <div class="item-resumo">
+                            <span> Horário </span>
+                            <strong id="resumoHorario"> -- </strong>
+                        </div>
+
+                        <div class="item-resumo">
+                            <span> Endereço </span>
+                            <strong id="resumoEndereco"> -- </strong>
+                        </div>
+
+                        <div class="item-resumo">
+                            <span> CEP </span>
+                            <strong id="resumoCep"> -- </strong>
+                        </div>
+                    </div>
+
+                    <div class="icone-resumo">
+                        <i class="bi bi-droplet-half"></i>
+                    </div>
+
+                    <button type="button" id="btnConfirmar" class="botao botao-confirmar">
+                        Confirmar agendamento
+                    </button>
+                </aside>
+
+                <img src="https://i.ibb.co/kVd6d795/planta-decorativa.png" alt="Planta decorativa" class="planta planta-direita" />
+            </section>
+        </main>
+
+        <section class="feedback">
+            <div id="mensagem" class="mensagem oculto">
+                Agendamento realizado com sucesso!
+            </div>
+        </section>
+
+        <section class="frase-destaque">
+            <div class="caixa-frase">
+                <i class="bi bi-heart-fill"></i>
+                <p>
+                    Mais que lavar roupas,
+                    cuidamos do seu tempo.
+                </p>
+            </div>
+        </section>
+
+        <footer class="rodape">
+            <div class="rodape-superior">
+
+                <div class="rodape-logo">
+                    <a href="index.html">
+                        <img src="https://i.ibb.co/5hFzRjt0/logo.png" alt="Loop Lavanderia" border="0" />
+                        <div class="logo-texto">
+                            <span>Loop</span>
+                            <span>Lavanderia</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="rodape-redes">
+                    <a href="#" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </div>
+
+                <div class="rodape-app">
+                    <h3> Baixe nosso App </h3>
+                    <p>
+                        Agende, acompanhe e gerencie<br>
+                        seus pedidos pelo aplicativo.
+                    </p>
+
+                    <div class="botoes-app">
+                        <a href="#" class="store">
+                            <i class="bi bi-google-play"></i>
+                            <div>
+                                <small>Disponível no</small>
+                                <span>Google Play</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="store">
+                            <i class="bi bi-apple"></i>
+                            <div>
+                                <small> Disponível na </small>
+                                <span> App Store </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="linha"></div>
+            <div class="copyright">
+                © 2026 Loop Lavanderia Delivery. Todos os direitos reservados.
+            </div>
+        </footer>
+    </div>
+
+    <script src="agendamento.js"></script>
+    <script src="menu.js"></script>
+
+</body>
+
+</html>
