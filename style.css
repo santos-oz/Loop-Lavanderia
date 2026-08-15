@@ -12,65 +12,6 @@ body {
 /* HEADER */
 
 header {
-<<<<<<< HEAD
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    border-bottom: 1px solid #ccc;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo i {
-    font-size: 40px;
-    color: #073B4C;
-}
-
-.logo h3 {
-    font-size: 26px;
-}
-
-.logo span {
-    font-size: 18px;
-}
-
-nav {
-    display: flex;
-    gap: 120px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #222;
-    font-size: 18px;
-    transition: .3s;
-}
-
-nav a:hover {
-    color: #073B4C;
-}
-
-.perfil {
-    width: 60px;
-    height: 60px;
-
-    border: 3px solid #C7A977;
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.perfil i {
-    font-size: 25px;
-}
-=======
       display:flex;
     justify-content:space-between;
     align-items:center;
@@ -224,7 +165,6 @@ hr{
     font-size:25px;
 }
 
->>>>>>> 99e1499 (finalização da parte mobile)
 
 /* HERO */
 
@@ -236,8 +176,14 @@ hr{
     padding: 50px 80px;
     gap: 50px;
 }
-<<<<<<< HEAD
-=======
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 50px 80pxo;
+    gap: 50px;
+}
 .hero-pedidos {
     display: flex;
     flex-direction: column;
@@ -260,7 +206,6 @@ hr{
     padding-bottom: 2rem;
     color: #073B4C;
 }
->>>>>>> 99e1499 (finalização da parte mobile)
 
 .hero-text {
     flex: 1;
@@ -342,14 +287,11 @@ hr{
 
 .item {
     text-align: center;
-<<<<<<< HEAD
-=======
     transition:.4s;
 }
 
 .item:hover{
     transform:translateY(-10px);
->>>>>>> 99e1499 (finalização da parte mobile)
 }
 
 .item i {
@@ -401,11 +343,7 @@ hr{
     border-radius: none;
 }
 
-<<<<<<< HEAD
 .hero-image img {
-=======
-.hero-imagem img {
->>>>>>> 99e1499 (finalização da parte mobile)
     width: 100%;
     border-radius: 50px;
     object-fit: cover;
@@ -414,18 +352,12 @@ hr{
 }
 
 .menu {
-<<<<<<< HEAD
-=======
     padding: 2rem;
->>>>>>> 99e1499 (finalização da parte mobile)
     position: relative;
     text-decoration: none;
     color: #222;
     padding-bottom: 20px;
-<<<<<<< HEAD
-=======
     font-size: 22px;
->>>>>>> 99e1499 (finalização da parte mobile)
 }
 
 .menu::after {
@@ -450,159 +382,6 @@ hr{
     transform: scaleX(0.75);
 }
 
-<<<<<<< HEAD
-.footer {
-    background-color: #eee1d2;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 50px;
-    flex-wrap: wrap;
-
-}
-
-.texto-descrição {
-    padding: 20px;
-    font-size: larger;
-}
-
-.redes {
-    display: flex;
-    gap: 40px;
-    font-size: 3rem;
-    padding: 20px;
-}
-
-.footer-nav {
-    padding: 40px;
-    display: grid;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.titulo-nav {
-    padding-left: 100px;
-    font-size: 26px;
-
-}
-
-.links {
-    padding: 30px;
-    margin: 20px;
-    display: flex;
-    gap: 70px;
-    font-size: larger;
-    width: 20rem;
-}
-#insta:hover{
-    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text
-}
-#whats:hover{
-    color:rgb(3, 145, 3)
-}
-#face:hover{
-    color: #076e96;
-}
-
-
-.links a {
-    text-decoration: none;
-    color: #111;
-
-    transition: .3s;
-}
-
-.links a:hover {
-    color: #0A5673;
-}
-
-
-.footer-app {
-    padding: 40px;
-}
-
-/* LINHA */
-
-.linha {
-    margin-top: 60px;
-    width: 1.5px;
-    background: #222;
-    min-height: 220px;
-}
-
-/* APP */
-
-.footer-app {
-    text-align: center;
-}
-
-.descricao-app {
-    font-size: larger;
-    margin-top: 20px;
-}
-
-.footer-app p {
-    font-size: 24px;
-    line-height: 40px;
-    color: #111;
-    margin-bottom: 35px;
-}
-
-.botoes-app {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.store {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    background: #18314F;
-    color: #fff;
-
-    padding: 10px 15px;
-
-    border-radius: 15px;
-    text-decoration: none;
-
-    transition: .3s;
-}
-
-.store:hover {
-    transform: translateY(-4px);
-}
-
-.store i {
-    font-size: 40px;
-}
-
-.store small {
-    display: block;
-    font-size: 14px;
-}
-
-.store span {
-    font-size: 28px;
-}
-
-/* Copyright */
-
-.copyright {
-    background-color: #eee1d2;
-    display: flex;
-    justify-content: center;
-}
-
-.footer1 {
-    display: block;
-    margin-left: 5rem;
-    margin-top: 2rem;
-=======
 
 /* FOOTER */
 
@@ -736,7 +515,6 @@ hr{
     text-align:center;
     color:#163547;
     font-size:14px;
->>>>>>> 99e1499 (finalização da parte mobile)
 }
 
 .paragrafo1 {
@@ -745,12 +523,6 @@ hr{
 
 
 }
-<<<<<<< HEAD
-
-
-
-
-=======
 .localizacao{
     display: inline-block;
 }
@@ -832,12 +604,14 @@ hr{
     align-items: center;
     margin-top: -30rem;
     margin-left: 45rem;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
     width: 100%;
     max-width: 900px;
 }
 .mod-login {
     display: none;
+}
+.mod-login {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -998,12 +772,7 @@ hr{
     border: none;
     cursor: pointer;
 }
-@media(min-width:721px){
-    .hamburguer{
-        display: none;
-    }
-}
->>>>>>> 99e1499 (finalização da parte mobile)
+
 
 /* RESPONSIVO */
 
@@ -1015,32 +784,22 @@ hr{
     }
 
     nav {
-<<<<<<< HEAD
-=======
-        display: flex;
->>>>>>> 99e1499 (finalização da parte mobile)
         flex-direction: column;
         text-align: center;
         gap: 15px;
     }
 
-<<<<<<< HEAD
-=======
     
 
->>>>>>> 99e1499 (finalização da parte mobile)
 
     .hero {
         flex-direction: column;
         padding: 30px;
     }
-<<<<<<< HEAD
-=======
     .hero-pedidos {
         flex-direction: column;
         padding: 30px;
     }
->>>>>>> 99e1499 (finalização da parte mobile)
 
     .hero-text h1 {
         font-size: 50px;
@@ -1057,118 +816,5 @@ hr{
 
     .card-info {
         width: 100%;
-<<<<<<< HEAD
     }
 }
-=======
-        margin-left: 0;
-    }
-
-    .pedido-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .status, .status2, .status3 {
-        margin-right: 0;
-    }
-
-    .alinhamento {
-        margin-left: 0;
-        margin-top: 0;
-    }
-
-    .stats hr {
-        margin-right: 0;
-        width: 3rem;
-    }
-
-    .cardstatus {
-        width: 100%;
-        max-width: 320px;
-        margin-left: 0;
-    }
-
-    .mapa {
-        margin-top: 7rem;
-        margin-left: 2rem;
-
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-    }
-
-    .mapa iframe {
-        width: 100%;
-        max-width: 80%;
-        height: 290px;
-    }
-
-    .informacao {
-        margin-left: 0;
-    }
-
-    .localizacao {
-        display: block;
-        width: 100%;
-        margin-left: 12rem;
-    }
-
-    .card12, .card13 {
-        width: 100%;
-        max-width: 320px;
-        margin-left: 0;
-    }
-
-    .rodape {
-        padding: 40px 25px 25px;
-    }
-
-    .rodape-superior {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .rodape-logo a {
-        justify-content: center;
-    }
-
-    .rodape-redes {
-        justify-content: center;
-    }
-
-    .rodape-app {
-        text-align: center;
-    }
-
-    .botoes-app {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .hamburguer{
-        display: flex;
-        margin-right: 35rem;
-        width: 5rem;
-        
-        height: 2rem;
-    }
-    header .btn-mb{
-        display: flex;
-        width: 3rem;
-        border-radius: 0.80rem;
-        height: 3rem;
-        border: none;
-        justify-content: center;
-        align-items: center;
-    }
-    header .hamburguer #botaoclick{
-        height: 1rem;
-        width: 10rem;
-        align-items: center;
-        justify-content: center;
-    }
-}
->>>>>>> 99e1499 (finalização da parte mobile)
