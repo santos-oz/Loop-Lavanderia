@@ -106,7 +106,7 @@ formulario.addEventListener("submit", function(event){
     }
 
     mensagemFormulario.textContent =
-    "Formulário válido! Clique em Confirmar Agendamento.";
+    "Veja o resumo do pedido e clique em Confirmar Agendamento.";
     mensagemFormulario.style.color = "#198754";
 });
 
