@@ -788,3 +788,79 @@ header .hamburguer #botaoclick{
         transform:scale(1);
     }
 }
+
+/* =========================================
+   RESPONSIVIDADE DO MODAL DE CONFIRMAÇÃO
+   ========================================= */
+
+@media (max-width: 720px) {
+    .modal-conteudo {
+        width: calc(100% - 30px);
+        max-width: 500px;
+        padding: 45px 25px 30px;
+        border-radius: 25px;
+    }
+
+    .modal-conteudo h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 18px;
+        padding: 0 15px;
+    }
+
+    .modal-conteudo p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .btn-modal {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    .fechar-modal {
+        top: 12px;
+        right: 15px;
+    }
+
+    .fechar-modal i {
+        font-size: 28px;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 500px) {
+    .modal-conteudo {
+        width: calc(100% - 24px);
+        padding: 42px 18px 25px;
+        border-width: 2px;
+        border-radius: 22px;
+    }
+
+    .modal-conteudo h2 {
+        font-size: 25px;
+        padding: 0 5px;
+    }
+
+    .modal-conteudo p {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .btn-modal {
+        padding: 13px 15px;
+        font-size: 16px;
+    }
+
+    .fechar-modal {
+        top: 10px;
+        right: 12px;
+    }
+
+    .fechar-modal i {
+        font-size: 24px;
+    }
+}
