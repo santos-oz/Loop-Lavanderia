@@ -106,7 +106,7 @@ formulario.addEventListener("submit", function(event){
     }
 
     mensagemFormulario.textContent =
-    "Veja o resumo do pedido abaixo ⭣" <br> "e clique em Confirmar Agendamento.";
+    "Veja o resumo do pedido abaixo ⭣ e clique em Confirmar Agendamento.";
     mensagemFormulario.style.color = "#198754";
 });
 
