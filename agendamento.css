@@ -993,6 +993,54 @@ button, input, select, textarea {
     box-shadow: 0 0 0 3px rgba(79, 132, 171, .16);
 }
 
+.pagina-agendamento .input-servico {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.pagina-agendamento .input-servico select {
+    min-height: 50px;
+    padding-right: 52px;
+    appearance: none;
+    cursor: pointer;
+}
+
+.pagina-agendamento .input-servico > i {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    color: #4F84AB;
+    font-size: 19px;
+    line-height: 1;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.pagina-agendamento .input-servico:focus-within {
+    box-shadow: 0 0 0 3px rgba(79, 132, 171, .16);
+}
+
+.pagina-agendamento .botao-agendar,
+.pagina-agendamento .botao-confirmar {
+    width: 100%;
+    max-width: 280px;
+    min-height: 50px;
+}
+
+.pagina-agendamento .botao-confirmar {
+    align-self: center;
+}
+
 @media (max-width: 1080px) {
     .pagina-agendamento header {
         grid-template-columns: minmax(0, 1fr) auto auto;
@@ -1053,6 +1101,36 @@ button, input, select, textarea {
     }
 }
 
+@media (max-width: 720px) {
+    .pagina-agendamento .rodape {
+        padding: 40px 20px 20px;
+    }
+
+    .pagina-agendamento .rodape-superior {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .pagina-agendamento .rodape-logo a,
+    .pagina-agendamento .rodape-redes,
+    .pagina-agendamento .botoes-app {
+        justify-content: center;
+    }
+
+    .pagina-agendamento .rodape-app {
+        text-align: center;
+    }
+
+    .pagina-agendamento .botoes-app {
+        flex-wrap: wrap;
+    }
+
+    .pagina-agendamento .copyright {
+        line-height: 1.5;
+    }
+}
+
 @media (max-width: 520px) {
     .pagina-agendamento header {
         gap: 10px;
@@ -1075,5 +1153,24 @@ button, input, select, textarea {
 
     .pagina-agendamento .perfil {
         border-width: 2px;
+    }
+
+    .pagina-agendamento .botao-agendar,
+    .pagina-agendamento .botao-confirmar {
+        max-width: none;
+    }
+
+    .pagina-agendamento .rodape {
+        padding: 35px 15px 20px;
+    }
+
+    .pagina-agendamento .botoes-app {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pagina-agendamento .store {
+        width: min(100%, 210px);
+        justify-content: center;
     }
 }
