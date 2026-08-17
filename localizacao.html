@@ -7,6 +7,7 @@
     <title>Loop - Localização</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="localizacao.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
@@ -14,24 +15,26 @@
     <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
 </head>
 
-<body>
+<body class="pagina-localizacao">
+
     <!-- Header -->
     <header>
+        <a href="index.html" class="logo">
+            <p><img src="https://i.ibb.co/5hFzRjt0/logo.png" alt="Logo Loop Lavanderia" width="50"></p>
+            <h3>Loop <br>Lavanderia</h3>
+        </a>
 
-        <div class="logo">
-            <a href="index.html" class="logo">
-                <div class="logo">
-                    <p><img src="https://i.ibb.co/5hFzRjt0/logo.png" alt="logo" border="0" width="50rem"></p>
-                    <h3>Loop <br>Lavanderia</h3>
-                </div>
-            </a>
-        </div>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
 
-        <nav>
+        <nav id="menu-principal">
             <a href="como-funciona.html" class="menu">Como funciona</a>
-            <a href="nossos-servicos.html" class="menu">Serviço</a>
+            <a href="nossos-servicos.html" class="menu">Serviços</a>
             <a href="localizacao.html" class="menu">Lavanderias próximas</a>
             <a href="agendamento.html" class="menu">Agendamento</a>
             <a href="sobre-nos.html" class="menu">Sobre nós</a>
@@ -41,34 +44,61 @@
             <i class="fa-solid fa-user"></i>
         </div>
     </header>
-    <section class="localizacao">
-    <div class="informacao">
-        <h1 class="lavtxt">Lavanderia mais <br> próxima: </h1>
-        <div class="card12">Encontre a unidade mais<br> perto de você <br><i class="icone1">🌎</i></div>
-        <div class="card13" id="unpaulista">
-            <i>🥼</i>
-            <label>Loop Premium - Centro     <span class="star2"> ⭐ 4.5</span><br>
-            Avenida Paulista, 123 - Centro <br>
-            📍1,2 Km de você <label class="aberto">Aberta</label></label>
+    <main>
+        <section class="localizacao">
+            <div class="informacao">
+                <h1 class="lavtxt">Lavanderia mais próxima</h1>
+
+                <div class="card12">
+                    <span>Encontre a unidade mais perto de você</span>
+                    <i class="icone1" aria-hidden="true">🌎</i>
+                </div>
+
+                <button class="card13" id="unpaulista" type="button" aria-label="Ver no mapa a unidade da Avenida Paulista">
+                    <i aria-hidden="true">🥼</i>
+                    <span class="unidade-conteudo">
+                        <span class="unidade-topo">
+                            <strong>Loop Premium - Centro</strong>
+                            <span class="star2">⭐ 4.5</span>
+                        </span>
+                        <span>Avenida Paulista, 123 - Centro</span>
+                        <span class="unidade-rodape">📍 1,2 km de você <span class="aberto">Aberta</span></span>
+                    </span>
+                </button>
+
+                <button class="card13" id="unfaria" type="button" aria-label="Ver no mapa a unidade da Avenida Faria Lima">
+                    <i aria-hidden="true">🥼</i>
+                    <span class="unidade-conteudo">
+                        <span class="unidade-topo">
+                            <strong>Loop Premium - Centro</strong>
+                            <span class="star2">⭐ 4.5</span>
+                        </span>
+                        <span>Avenida Faria Lima, 123 - Centro</span>
+                        <span class="unidade-rodape">📍 1,7 km de você <span class="aberto">Aberta</span></span>
+                    </span>
+                </button>
+
+                <button class="card13" id="itaimbi" type="button" aria-label="Ver no mapa a unidade do Itaim Bibi">
+                    <i aria-hidden="true">🥼</i>
+                    <span class="unidade-conteudo">
+                        <span class="unidade-topo">
+                            <strong>Loop Premium - Centro</strong>
+                            <span class="star2">⭐ 4.5</span>
+                        </span>
+                        <span>Itaim Bibi, 123 - Centro</span>
+                        <span class="unidade-rodape">📍 1,2 km de você <span class="fechada">Fechada</span></span>
+                    </span>
+                </button>
             </div>
-            <div class="card13" id="unfaria">
-                <i>🥼</i>
-                <label>Loop Premium - Centro      <span class="star2"> ⭐ 4.5</span><br>
-                Avenida Faria Lima, 123 - Centro <br>
-            📍1,7 Km de você <label class="aberto">Aberta</label></label>
+
+            <div class="mapa" id="mapag">
+                <iframe title="Mapa da unidade Loop Lavanderia" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1557081785854!2d-46.65831887327022!3d-23.562850562669162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1783377736056!5m2!1spt-BR!2sbr" width="800" height="550" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
             </div>
-            <div class="card13" id="itaimbi">
-                <i>🥼</i>
-                <label>Loop Premium - Centro      <span class="star2"> ⭐ 4.5</span><br>
-                Itaim Bibi, 123 - Centro <br>
-            📍1,2 Km de você <label class="fechada">Fechada</label></label>
-            </div>
-    </div>
-    <div class="mapa" id="mapag"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1557081785854!2d-46.65831887327022!3d-23.562850562669162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1783377736056!5m2!1spt-BR!2sbr" width="800" height="550" style="border:2px solid #ccc; border-radius: 2rem; margin-top: -5rem;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-    </section>
+        </section>
+    </main>
     
 
-     <footer class="rodape">
+ <footer class="rodape">
             <div class="rodape-superior">
 
                 <div class="rodape-logo">
@@ -125,8 +155,10 @@
                 © 2026 Loop Lavanderia Delivery. Todos os direitos reservados.
             </div>
         </footer>
+
     
     <script src="localizacao.js"></script>
+    <script src="menu.js"></script>
 </body>
 
 </html>

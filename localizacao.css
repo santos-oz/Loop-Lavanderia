@@ -1,0 +1,383 @@
+/* Ajustes exclusivos da página Lavanderias próximas.
+   As classes originais foram preservadas para não afetar os scripts do projeto. */
+
+.pagina-localizacao {
+    min-width: 0;
+    overflow-x: hidden;
+    color: #073B4C;
+}
+
+.pagina-localizacao header {
+    position: relative;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 20px 60px;
+    background: #FDF8F3;
+}
+
+.pagina-localizacao header > .logo {
+    gap: 10px;
+}
+
+.pagina-localizacao header > .logo p {
+    display: flex;
+    margin: 0;
+}
+
+.pagina-localizacao header > .logo h3 {
+    color: #073B4C;
+}
+
+.pagina-localizacao header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.pagina-localizacao .menu {
+    padding: 16px clamp(10px, 1.35vw, 22px);
+    font-size: clamp(16px, 1.3vw, 19px);
+    white-space: nowrap;
+}
+
+.pagina-localizacao .menu-toggle {
+    display: none;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(7, 59, 76, .2);
+    border-radius: 12px;
+    background: transparent;
+    color: #073B4C;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.pagina-localizacao main {
+    width: 100%;
+}
+
+.pagina-localizacao .localizacao {
+    display: grid;
+    grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+    align-items: stretch;
+    gap: clamp(32px, 5vw, 72px);
+    width: min(100% - 48px, 1240px);
+    margin: 0 auto;
+    padding: clamp(44px, 6vw, 76px) 0;
+}
+
+.pagina-localizacao .informacao {
+    min-width: 0;
+}
+
+.pagina-localizacao .lavtxt {
+    margin: 0 0 28px;
+    color: #073B4C;
+    font-size: clamp(28px, 2.5vw, 36px);
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    white-space: nowrap;
+}
+
+.pagina-localizacao .card12,
+.pagina-localizacao .card13 {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 18px;
+}
+
+.pagina-localizacao .card12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90px;
+    padding: 20px 22px;
+    background: #EFDDBF;
+    color: #073B4C;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.pagina-localizacao .card12 .icone1 {
+    flex: 0 0 auto;
+    margin-left: 18px;
+    font-size: 30px;
+    font-style: normal;
+}
+
+.pagina-localizacao .card13 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 112px;
+    margin-top: 16px;
+    padding: 18px;
+    border: 1px solid rgba(7, 59, 76, .14);
+    background: #FFFFFF;
+    box-shadow: 0 8px 22px rgba(7, 59, 76, .08);
+    color: #073B4C;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+
+.pagina-localizacao .card13:hover,
+.pagina-localizacao .card13:focus-visible {
+    border: 1px solid #C7A977;
+    outline: none;
+    box-shadow: 0 12px 28px rgba(7, 59, 76, .14);
+    transform: translateY(-2px);
+}
+
+.pagina-localizacao .card13 > i {
+    flex: 0 0 auto;
+    margin: 0 14px 0 0;
+    padding: 0;
+    font-size: 32px;
+    font-style: normal;
+    box-shadow: none;
+}
+
+.pagina-localizacao .unidade-conteudo {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.pagina-localizacao .unidade-topo,
+.pagina-localizacao .unidade-rodape {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagina-localizacao .star2 {
+    flex: 0 0 auto;
+    margin: 0;
+    font-size: 14px;
+}
+
+.pagina-localizacao .aberto,
+.pagina-localizacao .fechada {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pagina-localizacao .aberto {
+    background: #F1DEC4;
+}
+
+.pagina-localizacao .fechada {
+    background: #E4E4E4;
+}
+
+.pagina-localizacao .mapa {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: 560px;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(7, 59, 76, .14);
+    border-radius: 24px;
+    background: #E7E3DE;
+    box-shadow: 0 16px 38px rgba(7, 59, 76, .12);
+}
+
+.pagina-localizacao .mapa iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+}
+
+@media (max-width: 1080px) {
+    .pagina-localizacao header {
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        padding: 16px 24px;
+    }
+
+    .pagina-localizacao header nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 16px;
+        right: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 12px;
+        border: 1px solid rgba(7, 59, 76, .12);
+        border-radius: 16px;
+        background: #FDF8F3;
+        box-shadow: 0 18px 40px rgba(7, 59, 76, .14);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+    }
+
+    .pagina-localizacao header nav.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .pagina-localizacao .menu-toggle {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: end;
+    }
+
+    .pagina-localizacao .menu {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 10px;
+        font-size: 17px;
+        text-align: left;
+    }
+
+    .pagina-localizacao .menu::after {
+        display: none;
+    }
+
+    .pagina-localizacao .menu:hover,
+    .pagina-localizacao .menu:focus-visible {
+        background: #EFDDBF;
+        color: #073B4C;
+    }
+
+    .pagina-localizacao .localizacao {
+        grid-template-columns: minmax(280px, 330px) minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .pagina-localizacao .lavtxt {
+        font-size: clamp(27px, 3vw, 32px);
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 820px) {
+    .pagina-localizacao .localizacao {
+        grid-template-columns: 1fr;
+        width: min(100% - 36px, 680px);
+        padding: 38px 0 48px;
+    }
+
+    .pagina-localizacao .lavtxt {
+        margin-bottom: 22px;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .pagina-localizacao .card12 {
+        min-height: 82px;
+    }
+
+    .pagina-localizacao .mapa,
+    .pagina-localizacao .mapa iframe {
+        min-height: 460px;
+    }
+
+    .pagina-localizacao .rodape {
+        padding: 42px 24px 22px;
+    }
+
+    .pagina-localizacao .rodape-superior {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .pagina-localizacao .rodape-app {
+        text-align: center;
+    }
+
+    .pagina-localizacao .botoes-app {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 520px) {
+    .pagina-localizacao header {
+        gap: 10px;
+        padding: 14px 16px;
+    }
+
+    .pagina-localizacao header > .logo h3 {
+        font-size: 19px;
+    }
+
+    .pagina-localizacao header > .logo img {
+        width: 40px;
+    }
+
+    .pagina-localizacao .perfil,
+    .pagina-localizacao .menu-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .pagina-localizacao .perfil {
+        border-width: 2px;
+    }
+
+    .pagina-localizacao .localizacao {
+        width: min(100% - 28px, 680px);
+        padding-top: 32px;
+        gap: 24px;
+    }
+
+    .pagina-localizacao .lavtxt {
+        font-size: clamp(24px, 7.4vw, 30px);
+    }
+
+    .pagina-localizacao .card13 {
+        padding: 16px 14px;
+    }
+
+    .pagina-localizacao .card13 > i {
+        margin-right: 10px;
+        font-size: 28px;
+    }
+
+    .pagina-localizacao .unidade-topo,
+    .pagina-localizacao .unidade-rodape {
+        align-items: flex-start;
+    }
+
+    .pagina-localizacao .mapa,
+    .pagina-localizacao .mapa iframe {
+        min-height: 360px;
+        border-radius: 20px;
+    }
+
+    .pagina-localizacao .store {
+        padding: 11px 14px;
+    }
+}
