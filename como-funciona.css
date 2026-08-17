@@ -36,7 +36,15 @@ header nav{
     align-items:center;
     text-decoration: none;
     gap:10px;
-    font-size: 90px;
+}
+
+.logo p{
+    display:flex;
+    margin:0;
+}
+
+.logo img{
+    width:50px;
 }
  
 .logo i{
@@ -127,8 +135,7 @@ header nav{
 
 .titulo{
     text-align:justify;
-    margin-bottom:60px;
-     font-size:2.9rem;
+    font-size:2.9rem;
     color:#0F2D3A;
     margin-bottom:15px;
 }
@@ -252,11 +259,10 @@ header nav{
     border-radius:24px;
 }
 
-.lateral button{
-    color:#fff;
-}
-
-button{
+.btn-agendar{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
     padding:20px 40px;
     margin: 1.5rem;
     border:none;
@@ -265,13 +271,13 @@ button{
     border-radius:15px;
     cursor:pointer;
     font-size:20px;
-    cursor:pointer;
+    text-decoration:none;
     transition:.3s;
 }
 
-button:hover{
+.btn-agendar:hover{
     background:#0d2b3d;
-     transform:translateY(-3px);
+    transform:translateY(-3px);
 }
 
 /* AVISO */
@@ -526,6 +532,15 @@ button:hover{
         border-width:2px;
     }
 
+    .como-funciona{
+        width:100%;
+        padding:48px 20px;
+    }
+
+    .subtitulo{
+        padding:24px 0 40px;
+    }
+
     .passos{
         display:grid;
         grid-template-columns:1fr 1fr;
@@ -534,6 +549,34 @@ button:hover{
 
     .seta{
         display:none;
+    }
+
+    .rodape{
+        padding:40px 20px 20px;
+    }
+
+    .rodape-superior{
+        grid-template-columns:1fr;
+        gap:30px;
+        text-align:center;
+    }
+
+    .rodape-logo a,
+    .rodape-redes,
+    .botoes-app{
+        justify-content:center;
+    }
+
+    .rodape-app{
+        text-align:center;
+    }
+
+    .botoes-app{
+        flex-wrap:wrap;
+    }
+
+    .copyright{
+        line-height:1.5;
     }
 
 }
@@ -552,8 +595,9 @@ button:hover{
         width:100%;
     }
 
-    button{
+    .btn-agendar{
         width:100%;
+        margin:1.5rem 0;
     }
 
     .aviso{
@@ -561,4 +605,29 @@ button:hover{
         text-align:center;
     }
 
+}
+
+@media(max-width:520px){
+    header{
+        gap:10px;
+        padding:14px 16px;
+    }
+
+    header > .logo img{
+        width:40px;
+    }
+
+    header > .logo h3{
+        font-size:19px;
+    }
+
+    .perfil,
+    .menu-toggle{
+        width:44px;
+        height:44px;
+    }
+
+    .rodape{
+        padding:35px 15px 20px;
+    }
 }
