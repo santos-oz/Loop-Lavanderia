@@ -8,8 +8,8 @@
     <title> Agendamento - Loop Lavanderia </title>
 
     <link rel="stylesheet" href="agendamento.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="imgs/logo.png">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
@@ -38,27 +38,25 @@
 
     <div class="pagina-agendamento">
         <header>
-            <div class="hamburguer">
-                <button type="button" class="btn-mb"><i class="fa-solid fa-bars" id="botaoclick"></i></button></div>
-        <div class="logo">
-            <a href="index.html" class="logo">
-                <div class="logo">
-                    <p><img src="https://i.ibb.co/5hFzRjt0/logo.png" alt="logo" border="0" width="50rem"></p>
-                    <h3>Loop <br>Lavanderia</h3>
-                </div>
-            </a>
-        </div>
+        <a href="index.html" class="logo">
+            <p><img src="https://i.ibb.co/5hFzRjt0/logo.png" alt="Logo Loop Lavanderia" width="50"></p>
+            <h3>Loop <br>Lavanderia</h3>
+        </a>
 
-        <nav class="menuclick">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <nav id="menu-principal">
             <a href="como-funciona.html" class="menu">Como funciona</a>
             <a href="nossos-servicos.html" class="menu">Serviços</a>
             <a href="localizacao.html" class="menu">Lavanderias próximas</a>
-            <a href="agendamento.html" class="menu">Agendamento</a>
+            <a href="agendamento.html" class="menu menu-ativo">Agendamento</a>
             <a href="sobre-nos.html" class="menu">Sobre nós</a>
         </nav>
 
         <div class="perfil">
-            <i class="bi bi-person-circle"></i>
+            <i class="fa-solid fa-user"></i>
         </div>
     </header>
 
@@ -77,12 +75,18 @@
 
                             <div class="campo">
                                 <label for="data"> 1. Data da coleta </label>
+                                <div class="input-data-hora">
                                     <input type="date" id="data" name="data" required>
+                                    <i class="bi bi-calendar3" aria-hidden="true"></i>
+                                </div>
                             </div>
 
                             <div class="campo">
                                 <label for="horario"> 2. Horário </label>
+                                <div class="input-data-hora">
                                     <input type="time" id="horario" name="horario" required>
+                                    <i class="bi bi-clock" aria-hidden="true"></i>
+                                </div>
                             </div>
 
                             <div class="campo">

@@ -9,10 +9,7 @@ html {
 }
 
 body {
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f7f3ee;
-    color:#163547;
-    line-height: 1.5;
+    background: #FDF8F3;
 }
 
 /* Header */
@@ -35,7 +32,7 @@ header{
 .logo a{
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:12px;
     text-decoration:none;
 }
 
@@ -46,8 +43,7 @@ header{
 }
 
 .logo img{
-    width:64px;
-    display:block;
+    width:55px;
 }
 
 /* Menu */
@@ -104,9 +100,9 @@ nav a.ativo::after{
 
 /* Perfil */
 .perfil{
-    width:60px;
-    height:60px;
-    border:3px solid #C7A977;
+    width:52px;
+    height:52px;
+    border:2px solid #D7A35A;
     border-radius:50%;
     display:flex;
     justify-content:center;
@@ -117,6 +113,13 @@ nav a.ativo::after{
 .perfil i{
     font-size:30px;
     color:#163547;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f3ee;
+    color:#163547;
+    line-height: 1.5;
 }
 
 img {
@@ -132,6 +135,93 @@ button, input, select, textarea {
     min-height:100vh;
     display:flex;
     flex-direction:column;
+    min-width:0;
+    overflow-x:clip;
+}
+
+.topo {
+    height:85px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    border-bottom:1px solid #ccc;
+}
+
+.logo a {
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+}
+
+.logo img {
+    width:64px;
+    display:block;
+}
+
+.logo-texto {
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+}
+
+.logo-texto span:first-child {
+    font-size:26px;
+    font-weight:bold;
+    color:#163547;
+}
+
+.logo-texto span:last-child {
+    font-size:16px;
+    color:#356f9d;
+}
+
+.menu {
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.menu ul {
+    display:flex;
+    list-style:none;
+    gap:45px;
+}
+
+.menu a {
+    text-decoration:none;
+    color:#163547;
+    font-size:16px;
+    transition:.3s;
+}
+
+.menu a:hover {
+    color:#4f84ab;
+}
+
+.menu .ativo {
+    color:#4f84ab;
+    font-weight:bold;
+}
+
+.perfil {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #C7A977;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil a {
+    font-size:26px;
+    color:#163547;
+}
+
+.perfil a:hover {
+    color:#0F2D3A;
 }
 
 .conteudo {
@@ -582,10 +672,14 @@ button, input, select, textarea {
         padding:25px;
     }
 
-    nav {
-        flex-direction:column;
-        text-align:center;
-        gap:15px;
+    .menu {
+        width:100%;
+    }
+
+    .menu ul {
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
     }
 
     .conteudo {
@@ -645,29 +739,6 @@ button, input, select, textarea {
     justify-content:center;
     flex-wrap:wrap;
 }
-.hamburguer{
-    display: flex;
-    margin-right: 35rem;
-    width: 5rem;
-    
-    height: 2rem;
-}
-header .btn-mb{
-    display: flex;
-    width: 3rem;
-    border-radius: 0.80rem;
-    height: 3rem;
-    border: none;
-    justify-content: center;
-    align-items: center;
-}
-header .hamburguer #botaoclick{
-    height: 1rem;
-    width: 10rem;
-    align-items: center;
-    justify-content: center;
-}
-
 
 }
 
@@ -789,78 +860,220 @@ header .hamburguer #botaoclick{
     }
 }
 
-/* =========================================
-   RESPONSIVIDADE DO MODAL DE CONFIRMAÇÃO
-   ========================================= */
+/* Padronização da página Agendamento com o restante do site */
+.pagina-agendamento header {
+    position: relative;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0;
+    padding: 20px 60px;
+    background: #FDF8F3;
+}
 
-@media (max-width: 720px) {
-    .modal-conteudo {
-        width: calc(100% - 30px);
-        max-width: 500px;
-        padding: 45px 25px 30px;
-        border-radius: 25px;
+.pagina-agendamento header > .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.pagina-agendamento header > .logo p {
+    display: flex;
+    margin: 0;
+}
+
+.pagina-agendamento header > .logo img {
+    width: 50px;
+}
+
+.pagina-agendamento header > .logo h3 {
+    color: #073B4C;
+    font-size: 26px;
+}
+
+.pagina-agendamento header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.pagina-agendamento .menu {
+    display: block;
+    flex: initial;
+    padding: 16px clamp(10px, 1.35vw, 22px);
+    color: #222;
+    font-size: clamp(16px, 1.3vw, 19px);
+    white-space: nowrap;
+}
+
+.pagina-agendamento .menu::after {
+    bottom: 0;
+    height: 3px;
+    background: #156082;
+}
+
+.pagina-agendamento .menu:hover {
+    color: #D4B483;
+}
+
+.pagina-agendamento .menu-toggle {
+    display: none;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(7, 59, 76, .2);
+    border-radius: 12px;
+    background: transparent;
+    color: #073B4C;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.pagina-agendamento .perfil {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #C7A977;
+}
+
+.pagina-agendamento .perfil i {
+    color: #000;
+    font-size: 25px;
+}
+
+.pagina-agendamento .titulo {
+    color: #0F2D3A;
+}
+
+.pagina-agendamento .input-data-hora {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.pagina-agendamento .input-data-hora input {
+    min-height: 50px;
+    padding-right: 52px;
+    cursor: pointer;
+}
+
+.pagina-agendamento .input-data-hora > i {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    color: #4F84AB;
+    font-size: 19px;
+    line-height: 1;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.pagina-agendamento .input-data-hora input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.pagina-agendamento .input-data-hora:focus-within {
+    box-shadow: 0 0 0 3px rgba(79, 132, 171, .16);
+}
+
+@media (max-width: 1080px) {
+    .pagina-agendamento header {
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        gap: 12px;
+        padding: 16px 24px;
     }
 
-    .modal-conteudo h2 {
-        font-size: 30px;
-        line-height: 1.2;
-        margin-bottom: 18px;
-        padding: 0 15px;
+    .pagina-agendamento header nav {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 16px;
+        right: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        width: auto;
+        padding: 12px;
+        border: 1px solid rgba(7, 59, 76, .12);
+        border-radius: 16px;
+        background: #FDF8F3;
+        box-shadow: 0 18px 40px rgba(7, 59, 76, .14);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
     }
 
-    .modal-conteudo p {
-        font-size: 18px;
-        line-height: 1.5;
-        margin-bottom: 30px;
+    .pagina-agendamento header nav.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
-    .btn-modal {
+    .pagina-agendamento .menu-toggle {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: end;
+    }
+
+    .pagina-agendamento .menu {
         width: 100%;
-        padding: 14px 20px;
-        font-size: 18px;
+        padding: 14px 16px;
         border-radius: 10px;
+        font-size: 17px;
+        text-align: left;
     }
 
-    .fechar-modal {
-        top: 12px;
-        right: 15px;
+    .pagina-agendamento .menu::after {
+        display: none;
     }
 
-    .fechar-modal i {
-        font-size: 28px;
+    .pagina-agendamento .menu:hover,
+    .pagina-agendamento .menu:focus-visible {
+        background: #EFDDBF;
+        color: #073B4C;
     }
 }
 
-/* CELULARES PEQUENOS */
-@media (max-width: 500px) {
-    .modal-conteudo {
-        width: calc(100% - 24px);
-        padding: 42px 18px 25px;
+@media (max-width: 520px) {
+    .pagina-agendamento header {
+        gap: 10px;
+        padding: 14px 16px;
+    }
+
+    .pagina-agendamento header > .logo img {
+        width: 40px;
+    }
+
+    .pagina-agendamento header > .logo h3 {
+        font-size: 19px;
+    }
+
+    .pagina-agendamento .perfil,
+    .pagina-agendamento .menu-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .pagina-agendamento .perfil {
         border-width: 2px;
-        border-radius: 22px;
-    }
-
-    .modal-conteudo h2 {
-        font-size: 25px;
-        padding: 0 5px;
-    }
-
-    .modal-conteudo p {
-        font-size: 16px;
-        margin-bottom: 25px;
-    }
-
-    .btn-modal {
-        padding: 13px 15px;
-        font-size: 16px;
-    }
-
-    .fechar-modal {
-        top: 10px;
-        right: 12px;
-    }
-
-    .fechar-modal i {
-        font-size: 24px;
     }
 }

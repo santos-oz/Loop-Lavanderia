@@ -25,6 +25,28 @@ const campoHorario = document.getElementById("horario");
 const campoEndereco = document.getElementById("endereco");
 const campoCep = document.getElementById("cep");
 
+// Permite abrir o seletor clicando em qualquer parte dos campos de data e hora.
+[campoData, campoHorario].forEach(campo => {
+    const abrirSeletor = () => {
+        campo.focus();
+
+        if (typeof campo.showPicker === "function") {
+            campo.showPicker();
+        }
+    };
+
+    campo.addEventListener("click", abrirSeletor);
+
+    const cardCampo = campo.closest(".input-data-hora");
+    if (cardCampo) {
+        cardCampo.addEventListener("click", event => {
+            if (event.target !== campo) {
+                abrirSeletor();
+            }
+        });
+    }
+});
+
 // resumo
 const resumoServico = document.getElementById("resumoServico");
 const resumoData = document.getElementById("resumoData");
@@ -106,7 +128,7 @@ formulario.addEventListener("submit", function(event){
     }
 
     mensagemFormulario.textContent =
-    "Veja o resumo do pedido abaixo ⭣ e clique em Confirmar Agendamento.";
+    "Formulário válido! Clique em Confirmar Agendamento.";
     mensagemFormulario.style.color = "#198754";
 });
 
