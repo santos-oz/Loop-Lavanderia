@@ -1,6 +1,3 @@
-/* Ajustes exclusivos da página Lavanderias próximas.
-   As classes originais foram preservadas para não afetar os scripts do projeto. */
-
 .pagina-localizacao {
     min-width: 0;
     overflow-x: hidden;
@@ -75,7 +72,7 @@
 
 .pagina-localizacao .lavtxt {
     margin: 0 0 28px;
-    color: #073B4C;
+    color: #0F2D3A;
     font-size: clamp(28px, 2.5vw, 36px);
     line-height: 1.15;
     letter-spacing: -.02em;
