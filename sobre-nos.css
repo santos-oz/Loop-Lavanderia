@@ -24,7 +24,6 @@ header{
     align-items:center;
     text-decoration: none;
     gap:10px;
-    font-size: 90px;
 }
  
 .logo i{
@@ -374,6 +373,7 @@ body{
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
+    gap: 0;
     padding: 20px 60px;
     background: #FDF8F3;
 }
@@ -390,8 +390,14 @@ body{
     margin: 0;
 }
 
+.pagina-sobre header > .logo img {
+    width: 50px;
+}
+
 .pagina-sobre header > .logo h3 {
     color: #073B4C;
+    font-size: 26px;
+    line-height: 1.1;
 }
 
 .pagina-sobre header nav {
@@ -402,9 +408,22 @@ body{
 }
 
 .pagina-sobre .menu {
+    display: block;
+    flex: initial;
     padding: 16px clamp(10px, 1.35vw, 22px);
+    color: #222;
     font-size: clamp(16px, 1.3vw, 19px);
     white-space: nowrap;
+}
+
+.pagina-sobre .menu::after {
+    bottom: 0;
+    height: 3px;
+    background: #156082;
+}
+
+.pagina-sobre .menu:hover {
+    color: #D4B483;
 }
 
 .pagina-sobre .menu-toggle {
@@ -421,6 +440,7 @@ body{
 
 .pagina-sobre .perfil i {
     color: #000;
+    font-size: 25px;
 }
 
 .pagina-sobre .sobre .container {
@@ -563,5 +583,31 @@ body{
     .pagina-sobre .botoes-app {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+/* Centralização do conteúdo nas telas responsivas */
+@media (max-width: 900px) {
+    .pagina-sobre .sobre-texto {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .pagina-sobre .sobre-texto h2,
+    .pagina-sobre .sobre-texto p {
+        text-align: center;
+    }
+
+    .pagina-sobre .sobre-texto p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pagina-sobre .sobre-imagem {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

@@ -297,11 +297,11 @@ header nav{
     font-size:40px;
     color:#d98b2b;
 }
-/*
+
 .legenda{
     font-weight: 550;
 }
-*/
+
 /* FOOTER */
 
 .rodape{
@@ -629,5 +629,127 @@ header nav{
 
     .rodape{
         padding:35px 15px 20px;
+    }
+}
+
+/* Ajustes finais para tablet e telas menores */
+.pagina-como {
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+@media(max-width:1024px){
+    .pagina-como .como-funciona {
+        width: 100%;
+        padding: 56px 28px 64px;
+        text-align: center;
+    }
+
+    .pagina-como .titulo,
+    .pagina-como .titulo h2,
+    .pagina-como .subtitulo {
+        text-align: center;
+    }
+
+    .pagina-como .titulo h2 {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+    }
+
+    .pagina-como .subtitulo {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 28px 0 46px;
+        font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+        line-height: 1.5;
+    }
+
+    .pagina-como .conteudo {
+        flex-direction: column;
+        align-items: center;
+        gap: 52px;
+    }
+
+    .pagina-como .passos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        justify-items: center;
+        gap: 46px 36px;
+        width: 100%;
+        max-width: 760px;
+    }
+
+    .pagina-como .seta {
+        display: none;
+    }
+
+    .pagina-como .card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .pagina-como .lateral {
+        width: 100%;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .pagina-como .lateral figure {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pagina-como .lateral img {
+        width: min(100%, 360px);
+        max-width: none;
+    }
+
+    .pagina-como .btn-agendar {
+        margin: 0;
+    }
+
+    .pagina-como .aviso {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media(max-width:768px){
+    .pagina-como .como-funciona {
+        padding: 46px 20px 54px;
+    }
+
+    .pagina-como .passos {
+        gap: 40px 24px;
+    }
+
+    .pagina-como .subtitulo-card,
+    .pagina-como .card h3,
+    .pagina-como .legenda {
+        text-align: center;
+    }
+
+    .pagina-como .aviso {
+        width: 100%;
+        margin-top: 48px;
+    }
+}
+
+@media(max-width:560px){
+    .pagina-como .passos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagina-como .card {
+        max-width: 340px;
+    }
+
+    .pagina-como .btn-agendar {
+        width: min(100%, 340px);
+    }
+
+    .pagina-como .aviso {
+        flex-direction: column;
     }
 }
