@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loop - Pedidos</title>
+    <title>Meus pedidos - Loop Lavanderia</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pedidos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
@@ -18,68 +19,95 @@
 
 </head>
 
-<body>
+<body class="pagina-pedidos">
 
     <!-- Header -->
     <header>
-        <div class="hamburguer">
-            <button type="button" class="btn-mb"><i class="fa-solid fa-bars" id="botaoclick"></i></button></div>
-            <a href="index.html" class="logo">
-                <div class="logo">
-                    <p><img src="https://i.ibb.co/5hFzRjt0/logo.png" alt="logo" border="0" width="50rem"></p>
-                    <h3>Loop <br>Lavanderia</h3>
-                </div>
-            </a>
-        
-            <nav class="menuclick">
-                <a href="como-funciona.html" class="menu">Como funciona</a>
-                <a href="nossos-servicos.html" class="menu">Serviços</a>
-                <a href="localizacao.html" class="menu">Lavanderias próximas</a>
-                <a href="agendamento.html" class="menu">Agendamento</a>
-                <a href="sobre-nos.html" class="menu">Sobre nós</a>
-            </nav>
+        <a href="index.html" class="logo">
+            <p><img src="https://i.ibb.co/5hFzRjt0/logo.png" alt="Logo Loop Lavanderia" width="50"></p>
+            <h3>Loop <br>Lavanderia</h3>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <nav id="menu-principal">
+            <a href="como-funciona.html" class="menu">Como funciona</a>
+            <a href="nossos-servicos.html" class="menu">Serviços</a>
+            <a href="localizacao.html" class="menu">Lavanderias próximas</a>
+            <a href="agendamento.html" class="menu">Agendamento</a>
+            <a href="sobre-nos.html" class="menu">Sobre nós</a>
+        </nav>
 
         <div class="perfil">
             <i class="fa-solid fa-user"></i>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="hero-pedidos">
-        <h1 class="pedidos1">Meus Pedidos</h1>
-        <h2 class="npedido">Pedido #12345</h2>
-        <h3 class="data">02/05/2025 - 14:30</h3>
-<div class="stats">
-    <div class="pedido-item"><div class="status"><span class="check-white">✓</span></div>
-           <div class="alinhamento"> <h3>Coleta Agendada</h3>
-            <Label>Sua coleta foi agendada <br> com sucesso!</Label></div>
-        </div>
-        <hr>
-        <div class="pedido-item"> <div class="status"><span class="check-white">✓</span></div>
-        <div class="alinhamento"><h3>Roupas Coletadas</h3>
-            <label>Suas roupas foram coletadas <br> com todo carinho.</label></div>
-        </div>
-        <hr>
-        <div class="pedido-item"><div class="status2"><span class="check-white"><img src="imgs/logo.png" alt="logo" class="logostsa"></span></div>
-        <div class="alinhamento"> <h3>Em lavagem</h3>
-            <Label>Suas roupas estão sendo cuidadas <br> com produtos de qualidade.</Label>
-        </div></div>
-        <hr>
-        <div class="pedido-item"> <div class="status3"><span class="check-white"></span></div>
-        <div class="alinhamento"> <h3>Roupas Coletadas</h3>
-            <label>Suas roupas foram coletadas <br> com todo carinho.</label>
-        </div></div>
-        
-        
-        
-    </div>
-    <div class="cardstatus">
-        <label class="caminhao">🚚</label>
-        <label class="txtst">Previsão de entrega</label>
-        <label class="horaprev">24/05/2025 até 18:00</label>
-    </div>    
-  
-    </section>
+    <main class="conteudo-pedidos">
+        <section class="hero-pedidos" aria-labelledby="titulo-pedidos">
+            <div class="cabecalho-pedidos">
+                <h1 class="pedidos1" id="titulo-pedidos">Meus pedidos</h1>
+                <div class="identificacao-pedido">
+                    <h2 class="npedido">Pedido #12345</h2>
+                    <p class="data">02/05/2025 • 14:30</p>
+                </div>
+            </div>
+
+            <div class="pedido-layout">
+                <section class="painel-pedido" aria-label="Acompanhamento do pedido">
+                    <div class="stats">
+                        <div class="pedido-item">
+                            <div class="status"><span class="check-white">✓</span></div>
+                            <div class="alinhamento">
+                                <h3>Coleta agendada</h3>
+                                <p>Sua coleta foi agendada com sucesso!</p>
+                            </div>
+                        </div>
+
+                        <hr aria-hidden="true">
+
+                        <div class="pedido-item">
+                            <div class="status"><span class="check-white">✓</span></div>
+                            <div class="alinhamento">
+                                <h3>Roupas coletadas</h3>
+                                <p>Suas roupas foram coletadas com todo carinho.</p>
+                            </div>
+                        </div>
+
+                        <hr aria-hidden="true">
+
+                        <div class="pedido-item pedido-atual">
+                            <div class="status2">
+                                <span class="check-white"><img src="imgs/logo.png" alt="" class="logostsa"></span>
+                            </div>
+                            <div class="alinhamento">
+                                <h3>Em lavagem</h3>
+                                <p>Suas roupas estão sendo cuidadas com produtos de qualidade.</p>
+                            </div>
+                        </div>
+
+                        <hr aria-hidden="true">
+
+                        <div class="pedido-item">
+                            <div class="status3"><span class="check-white"></span></div>
+                            <div class="alinhamento">
+                                <h3>Pronto para entrega</h3>
+                                <p>Seu pedido será preparado para retornar até você.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="cardstatus" aria-label="Previsão de entrega">
+                    <span class="caminhao" aria-hidden="true">🚚</span>
+                    <span class="txtst">Previsão de entrega</span>
+                    <strong class="horaprev">24/05/2025 até 18:00</strong>
+                </aside>
+            </div>
+        </section>
+    </main>
 
         <!-- Footer -->
 
@@ -140,7 +168,8 @@
                 © 2026 Loop Lavanderia Delivery. Todos os direitos reservados.
             </div>
         </footer>
-<script src="menu.js"></script>
+
+    <script src="menu.js"></script>
 </body>
 
 </html>
