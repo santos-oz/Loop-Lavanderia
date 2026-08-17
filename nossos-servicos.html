@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Serviços - Loop Lavanderia </title>
     <link rel="stylesheet" href="servicos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="imgs/logo.png">
 
 </head>
@@ -17,8 +17,6 @@
     <div class="pagina-servicos">
 
      <header>
-        <div class="hamburguer">
-            <button type="button" class="btn-mb"><i class="fa-solid fa-bars" id="botaoclick"></i></button></div>
 
        <a href="index.html" class="logo">
             <div class="logo">
@@ -28,16 +26,20 @@
             </div>
         </a>
 
-        <nav class="menuclick">
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <nav id="menu-principal">
             <a href="como-funciona.html" class="menu">Como funciona</a>
-            <a href="nossos-servicos.html" class="menu">Serviços</a>
+            <a href="nossos-servicos.html" class="menu-ativo">Serviços</a>
             <a href="localizacao.html" class="menu">Lavanderias próximas</a>
             <a href="agendamento.html" class="menu">Agendamento</a>
             <a href="sobre-nos.html" class="menu">Sobre nós</a>
         </nav>
 
         <div class="perfil">
-            <i class="bi bi-person-circle"></i>
+            <i class="fa-solid fa-user"></i>
         </div>
      </header>
 
@@ -80,12 +82,12 @@
                             <p> Mais praticidade e economia na sua rotina. </p>
                         </article>
 
-                        <article class="card-servico"> <i class="bi bi-bed icone-servico"></i>
+                        <article class="card-servico"> <i class="fa-solid fa-bed icone-servico"></i>
                             <h3> Cama e banho </h3>
                             <p> Edredons, mantas e peças pesadas com lavagem cuidadosa. </p>
                         </article>
 
-                        <article class="card-servico"> <i class="bi bi-shoe-print icone-servico"></i>
+                        <article class="card-servico"> <i class="fa-solid fa-shoe-prints icone-servico"></i>
                             <h3> Lavagem de tênis </h3>
                             <p> Limpeza cuidadosa para seus tênis favoritos. </p>
                         </article>
