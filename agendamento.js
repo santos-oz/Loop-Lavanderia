@@ -1,11 +1,12 @@
 const listaServicos = [
-    "Lavagem Comum",
-    "Lavagem Expressa",
-    "Passadoria",
-    "Lavagem a Seco",
-    "Lavagem de Edredom",
-    "Lavagem de Cobertor",
-    "Lavagem de Tênis"
+    { nome: "Lavagem comum", icone: "bi bi-stars" },
+    { nome: "Roupas dobradas", icone: "bi bi-layers" },
+    { nome: "Passadoria", icone: "bi bi-badge-cc" },
+    { nome: "Peças delicadas", icone: "bi bi-droplet-half" },
+    { nome: "Lavagem a seco", icone: "bi bi-circle" },
+    { nome: "Planos mensais", icone: "bi bi-calendar3" },
+    { nome: "Cama e banho", icone: "fa-solid fa-bed" },
+    { nome: "Lavagem de tênis", icone: "fa-solid fa-shoe-prints" }
 ];
 
 const selectServico = document.getElementById("servico");
@@ -14,8 +15,8 @@ const selectServico = document.getElementById("servico");
 listaServicos.forEach(servico => {
     const option = document.createElement("option");
 
-    option.value = servico;
-    option.textContent = servico;
+    option.value = servico.nome;
+    option.textContent = servico.nome;
     selectServico.appendChild(option);
 });
 
@@ -24,6 +25,23 @@ const campoData = document.getElementById("data");
 const campoHorario = document.getElementById("horario");
 const campoEndereco = document.getElementById("endereco");
 const campoCep = document.getElementById("cep");
+
+// Mantém todo o campo de serviço clicável, incluindo a área do ícone.
+const cardServico = selectServico.closest(".input-servico");
+
+if (cardServico) {
+    cardServico.addEventListener("click", event => {
+        if (event.target === selectServico) {
+            return;
+        }
+
+        selectServico.focus();
+
+        if (typeof selectServico.showPicker === "function") {
+            selectServico.showPicker();
+        }
+    });
+}
 
 // Permite abrir o seletor clicando em qualquer parte dos campos de data e hora.
 [campoData, campoHorario].forEach(campo => {
@@ -53,6 +71,7 @@ const resumoData = document.getElementById("resumoData");
 const resumoHorario = document.getElementById("resumoHorario");
 const resumoEndereco = document.getElementById("resumoEndereco");
 const resumoCep = document.getElementById("resumoCep");
+const iconeResumoServico = document.getElementById("iconeResumoServico");
 
 // atualiza o resumo do pedido
 function atualizarResumo() {
@@ -70,6 +89,14 @@ function atualizarResumo() {
 
     resumoCep.textContent =
         campoCep.value || "--";
+
+    const servicoSelecionado = listaServicos.find(
+        servico => servico.nome === selectServico.value
+    );
+
+    iconeResumoServico.className = servicoSelecionado
+        ? servicoSelecionado.icone
+        : "bi bi-basket2";
 }
 
 selectServico.addEventListener("change", atualizarResumo);
@@ -128,7 +155,7 @@ formulario.addEventListener("submit", function(event){
     }
 
     mensagemFormulario.textContent =
-    "Formulário válido! Clique em Confirmar Agendamento.";
+    "Acompanhe o resumo do pedido e Clique em Confirmar Agendamento.";
     mensagemFormulario.style.color = "#198754";
 });
 
@@ -268,5 +295,4 @@ $("input, select, textarea").blur(function(){
         "box-shadow":""
     });
 });
-
 
