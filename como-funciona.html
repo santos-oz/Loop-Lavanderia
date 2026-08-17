@@ -17,8 +17,6 @@
 
     
     <header>
-        <div class="hamburguer">
-            <button type="button" class="btn-mb"><i class="fa-solid fa-bars" id="botaoclick"></i></button></div>
        <div class="logo">
             <a href="index.html" class="logo">
                 <div class="logo">
@@ -28,13 +26,17 @@
             </a>
        </div>
 
-       <nav class="menuclick">
-        <a href="como-funciona.html" class="menu">Como funciona</a>
-        <a href="nossos-servicos.html" class="menu">Serviços</a>
-        <a href="localizacao.html" class="menu">Lavanderias próximas</a>
-        <a href="agendamento.html" class="menu">Agendamento</a>
-        <a href="sobre-nos.html" class="menu">Sobre nós</a>
-    </nav>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+         <nav id="menu-principal">
+            <a href="como-funciona.html" class="menu">Como funciona</a>
+            <a href="nossos-servicos.html" class="menu">Serviços</a>
+            <a href="localizacao.html" class="menu">Lavanderias próximas</a>
+            <a href="agendamento.html" class="menu">Agendamento</a>
+            <a href="sobre-nos.html" class="menu">Sobre nós</a>
+        </nav>
  
         <div class="perfil">
             <i class="fa-solid fa-user"></i>
@@ -140,11 +142,11 @@
             <aside class="lateral">
 
                 <figure>
-                    <img class="cesto" src="imgs/Cesto de roupa.png" alt="Cesto com roupas">
+                    <img src="imgs/Cesto de roupa.png" alt="Cesto com roupas">
                 </figure>
 
-                <button class="button2">
-                    <a href="agendamento.html">Agendar agora</a>
+                <button>
+                    Agendar agora
                 </button>
 
             </aside>
@@ -221,7 +223,6 @@
             </div>
         </footer>
 
-        <script src="menu.js"></script>
-
+    <script src="menu.js"></script>
 </body>
 </html>
