@@ -6,7 +6,28 @@
     z-index: 100;
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0;
+    padding: 20px 60px;
     background: #FDF8F3;
+}
+
+.pagina-index header > .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: initial;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.pagina-index header > .logo p {
+    display: flex;
+    margin: 0;
+}
+
+.pagina-index header > .logo img {
+    width: 50px;
 }
 
 .pagina-index header nav {
@@ -18,9 +39,12 @@
 
 .pagina-index .logo h3 {
     color: #073B4C;
+    font-size: 26px;
 }
 
 .pagina-index .menu {
+    display: block;
+    flex: initial;
     padding: 16px clamp(10px, 1.35vw, 22px);
     font-size: clamp(16px, 1.3vw, 19px);
     white-space: nowrap;
@@ -43,11 +67,109 @@
     color: #1C1C1C;
 }
 
+.pagina-index .hero-text {
+    min-width: 0;
+    width: 100%;
+}
+
+.pagina-index .hero-text h1 {
+    color: #0F2D3A;
+    font-size: clamp(44px, 5vw, 72px);
+    text-wrap: balance;
+    overflow-wrap: break-word;
+}
+
+.pagina-index .hero-text > p {
+    max-width: 650px;
+    font-size: clamp(18px, 1.7vw, 24px);
+    line-height: 1.5;
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+}
+
+.pagina-index .card-info {
+    width: min(100%, 480px);
+    height: auto;
+    min-height: 112px;
+    margin-left: 0;
+}
+
+.pagina-index .card-info .paragrafo1 {
+    margin: 0;
+    font-size: clamp(16px, 1.5vw, 20px);
+    line-height: 1.45;
+}
+
 .pagina-index .btn-primario {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background: #0F2D3A;
     text-decoration: none;
+}
+
+.pagina-index .btn-secondario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.pagina-index .hero-imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    .pagina-index .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 42px 32px;
+    }
+
+    .pagina-index .hero-text h1 {
+        font-size: clamp(42px, 8vw, 60px);
+    }
+
+    .pagina-index .hero-text > p {
+        max-width: 100%;
+        font-size: clamp(18px, 3vw, 22px);
+    }
+
+    .pagina-index .hero-imagem {
+        width: 100%;
+        max-width: 680px;
+        margin: 0 auto;
+    }
+
+    .pagina-index .rodape {
+        padding: 40px 24px 20px;
+    }
+
+    .pagina-index .rodape-superior {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .pagina-index .rodape-logo a,
+    .pagina-index .rodape-redes,
+    .pagina-index .botoes-app {
+        justify-content: center;
+    }
+
+    .pagina-index .rodape-app {
+        text-align: center;
+    }
+
+    .pagina-index .botoes-app {
+        flex-wrap: wrap;
+    }
+
+    .pagina-index .copyright {
+        line-height: 1.5;
+    }
 }
 
 @media (max-width: 1080px) {
@@ -127,5 +249,85 @@
         width: 46px;
         height: 46px;
         border-width: 2px;
+    }
+
+    .pagina-index .hero {
+        padding: 36px 24px;
+    }
+
+    .pagina-index .hero-text h1 {
+        font-size: clamp(38px, 11vw, 50px);
+    }
+
+    .pagina-index .hero-text > p {
+        font-size: clamp(18px, 5vw, 20px);
+    }
+
+    .pagina-index .botoes {
+        flex-wrap: wrap;
+    }
+
+    .pagina-index .rodape {
+        padding: 40px 20px 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .pagina-index header {
+        gap: 10px;
+        padding: 14px 16px;
+    }
+
+    .pagina-index header > .logo h3 {
+        font-size: 19px;
+    }
+
+    .pagina-index header > .logo img {
+        width: 40px;
+    }
+
+    .pagina-index .perfil,
+    .pagina-index .menu-toggle {
+        width: 44px;
+        height: 44px;
+    }
+
+    .pagina-index .hero {
+        padding: 30px 18px;
+    }
+
+    .pagina-index .quebra-desktop {
+        display: none;
+    }
+
+    .pagina-index .hero-text h1 {
+        font-size: clamp(36px, 11vw, 48px);
+    }
+
+    .pagina-index .hero-text > p {
+        font-size: 18px;
+    }
+
+    .pagina-index .botoes {
+        flex-direction: column;
+    }
+
+    .pagina-index .btn-primario,
+    .pagina-index .btn-secondario {
+        width: 100%;
+    }
+
+    .pagina-index .rodape {
+        padding: 35px 15px 20px;
+    }
+
+    .pagina-index .botoes-app {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pagina-index .store {
+        width: min(100%, 210px);
+        justify-content: center;
     }
 }
