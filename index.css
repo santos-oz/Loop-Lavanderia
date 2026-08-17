@@ -122,53 +122,63 @@
 }
 
 @media (max-width: 900px) {
+
+    /* CONTEÚDO PRINCIPAL */
     .pagina-index .hero {
         flex-direction: column;
-        align-items: stretch;
-        padding: 42px 32px;
+        align-items: center;
+        padding: 50px 40px;
+        gap: 40px;
+    }
+
+    .pagina-index .hero-text {
+        width: 100%;
+        max-width: 750px;
+        text-align: center;
     }
 
     .pagina-index .hero-text h1 {
-        font-size: clamp(42px, 8vw, 60px);
+        font-size: clamp(42px, 7vw, 60px);
     }
 
     .pagina-index .hero-text > p {
-        max-width: 100%;
-        font-size: clamp(18px, 3vw, 22px);
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(18px, 2.5vw, 22px);
     }
 
-    .pagina-index .hero-imagem {
-        width: 100%;
-        max-width: 680px;
-        margin: 0 auto;
-    }
-
-    .pagina-index .rodape {
-        padding: 40px 24px 20px;
-    }
-
-    .pagina-index .rodape-superior {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .pagina-index .rodape-logo a,
-    .pagina-index .rodape-redes,
-    .pagina-index .botoes-app {
+    /* BOTÕES */
+    .pagina-index .botoes {
         justify-content: center;
     }
 
-    .pagina-index .rodape-app {
-        text-align: center;
+    /* BENEFÍCIOS */
+    .pagina-index .beneficios {
+        justify-content: center;
+        gap: 40px;
     }
 
-    .pagina-index .botoes-app {
-        flex-wrap: wrap;
+    .pagina-index .item i {
+        font-size: 45px;
     }
 
-    .pagina-index .copyright {
-        line-height: 1.5;
+    .pagina-index .item h4 {
+        font-size: 20px;
+    }
+
+    /* CARD */
+    .pagina-index .card-info {
+        width: min(100%, 480px);
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    /* IMAGEM */
+    .pagina-index .hero-imagem {
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
     }
 }
 
