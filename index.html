@@ -7,6 +7,7 @@
     <title>Loop Lavanderia</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="imgs/logo.png">
 
     <!-- Ícones -->
@@ -16,7 +17,7 @@
 
 </head>
 
-<body>
+<body class="pagina-index">
     <div class="fundo-ml"></div>
     <div class="mod-login">
         <h2 class="txtac">Acesse sua conta</h2>
@@ -66,7 +67,11 @@
             </div>
         </a>
 
-        <nav>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <nav id="menu-principal">
             <a href="como-funciona.html" class="menu">Como funciona</a>
             <a href="nossos-servicos.html" class="menu">Serviços</a>
             <a href="localizacao.html" class="menu">Lavanderias próximas</a>
@@ -99,9 +104,9 @@
             </p>
 
             <div class="botoes">
-                <button  class="btn-primario">
+                <a href="agendamento.html" class="btn-primario">
                     Agendar agora
-                </button>
+                </a>
 
                 <button id="" class="btn-secondario">
                     Saiba mais
@@ -206,6 +211,7 @@
         </footer>
 
 <script src="login.js"></script>
+<script src="menu.js"></script>
 </body>
 
 </html>
