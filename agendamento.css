@@ -1174,3 +1174,24 @@ button, input, select, textarea {
         justify-content: center;
     }
 }
+
+/* Padronização dos botões das lojas com as demais páginas */
+.pagina-agendamento .store {
+    line-height: normal;
+}
+
+@media (max-width: 520px) {
+    .pagina-agendamento .botoes-app {
+        width: auto;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pagina-agendamento .store {
+        width: auto;
+        padding: 12px 18px;
+        justify-content: flex-start;
+    }
+}

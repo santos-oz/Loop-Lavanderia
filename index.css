@@ -653,3 +653,20 @@
         text-align: center;
     }
 }
+
+/* Padronização dos botões das lojas com as demais páginas */
+@media (max-width: 520px) {
+    .pagina-index .botoes-app {
+        width: auto;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pagina-index .store {
+        width: auto;
+        padding: 12px 18px;
+        justify-content: flex-start;
+    }
+}
