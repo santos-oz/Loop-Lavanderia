@@ -1538,6 +1538,7 @@ body.pagina-como{
 .pagina-como .icone{
     width:120px;
     height:120px;
+    border:2px solid #16384A;
     border-radius:50%;
     background:#f4eadc;
     display:flex;
@@ -1547,7 +1548,7 @@ body.pagina-como{
 
 .pagina-como .icone i{
     font-size:55px;
-    color:#1f5b78;
+    color:#16384A;
 }
 
 /* NUMERO */
@@ -1556,7 +1557,7 @@ body.pagina-como{
     width:40px;
     height:40px;
     border-radius:50%;
-    background:#1f5b78;
+    background:#16384A;
     color:#fff;
     display:flex;
     justify-content:center;
@@ -1570,7 +1571,7 @@ body.pagina-como{
 /* TITULO */
 
 .pagina-como .card h3{
-    color:#1f5b78;
+    color:#16384A;
     margin-bottom:15px;
     font-size:1.3rem;
 }
@@ -1591,6 +1592,7 @@ body.pagina-como{
 
 .pagina-como .seta i{
     font-size:25px;
+    color:#16384A;
 }
 
 /* LATERAL */
@@ -1616,7 +1618,7 @@ body.pagina-como{
     padding:20px 40px;
     margin: 1.5rem;
     border:none;
-    background:#073B4C;
+    background:#16384A;
     color:#fff;
     border-radius:15px;
     cursor:pointer;
