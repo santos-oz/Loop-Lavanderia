@@ -2787,8 +2787,9 @@ body.pagina-agendamento {
 }
 
 /* Responvidade */
-@media (max-width:1200px){
-    .pagina-agendamento .agendamento {
+@media (max-width:1024px){
+    .pagina-agendamento .agendamento,
+    .pagina-agendamento .agendamento.resumo-liberado {
         grid-template-columns:1fr;
         justify-content:stretch;
     }
@@ -3525,22 +3526,44 @@ body.pagina-sobre{
     }
 }
 
-/* Texto principal no mesmo tamanho da página inicial */
+/* Título e parágrafos principais no mesmo tamanho da página inicial. */
+.pagina-sobre .sobre-texto h2 {
+    font-size: clamp(44px, 5vw, 72px);
+    line-height: 1.1;
+}
+
 .pagina-sobre .sobre-texto p {
     font-size: clamp(18px, 1.7vw, 24px);
     line-height: 1.5;
 }
 
 @media (max-width: 900px) {
+    .pagina-sobre .sobre-texto h2 {
+        font-size: clamp(42px, 8vw, 60px);
+    }
+
     .pagina-sobre .sobre-texto p {
         font-size: clamp(18px, 3vw, 22px);
     }
 }
 
-@media (max-width: 520px) {
-
+@media (max-width: 768px) {
     .pagina-sobre .sobre-texto h2 {
-        font-size: 2.7rem;
+        font-size: clamp(38px, 11vw, 50px);
+    }
+
+    .pagina-sobre .sobre-texto p {
+        font-size: clamp(18px, 5vw, 20px);
+    }
+}
+
+@media (max-width: 520px) {
+    .pagina-sobre .sobre-texto h2 {
+        font-size: clamp(36px, 11vw, 48px);
+    }
+
+    .pagina-sobre .sobre-texto p {
+        font-size: 18px;
     }
 }
 
