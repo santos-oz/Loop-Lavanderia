@@ -88,55 +88,47 @@ function iniciarModalConta() {
     estruturaModal.innerHTML = `
         <div class="fundo-ml" aria-hidden="true"></div>
 
-        <section class="mod-login" role="dialog" aria-modal="true" aria-labelledby="titulo-login" aria-hidden="true">
-            <button class="modal-fechar-login" type="button" aria-label="Fechar modal">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
-
+        <div class="mod-login" role="dialog" aria-modal="true" aria-labelledby="titulo-login" aria-hidden="true">
             <h2 class="txtac" id="titulo-login">Acesse sua conta</h2>
 
             <form class="form_login">
-                <label for="login-email">Email</label>
-                <input id="login-email" type="email" autocomplete="email" placeholder="Seu melhor email" required>
+                <label>Email:</label>
+                <input type="email" placeholder="Seu melhor email">
 
-                <label for="login-senha">Senha</label>
-                <input id="login-senha" type="password" autocomplete="current-password" placeholder="Sua senha" required>
+                <label>Senha:</label>
+                <input type="password" placeholder="Sua senha">
 
                 <button type="submit" class="entrar-log">Entrar</button>
                 <button type="button" class="registar-log">Registrar-se</button>
             </form>
-        </section>
+        </div>
 
-        <section class="form-cadas" role="dialog" aria-modal="true" aria-labelledby="titulo-cadastro" aria-hidden="true">
-            <button class="modal-fechar-login" type="button" aria-label="Fechar modal">
-                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-            </button>
-
+        <div class="form-cadas" role="dialog" aria-modal="true" aria-labelledby="titulo-cadastro" aria-hidden="true">
             <h2 class="txtac" id="titulo-cadastro">Crie sua conta</h2>
 
             <form class="form_cadastro">
-                <label for="cadastro-nome">Nome</label>
-                <input id="cadastro-nome" type="text" autocomplete="name" placeholder="Seu nome completo" required>
+                <label>Nome:</label>
+                <input type="text" placeholder="Seu nome completo">
 
-                <label for="cadastro-email">Email</label>
-                <input id="cadastro-email" type="email" autocomplete="email" placeholder="Seu melhor email" required>
+                <label>Email:</label>
+                <input type="email" placeholder="Seu melhor email">
 
-                <label for="cadastro-telefone">Telefone</label>
-                <input id="cadastro-telefone" type="tel" autocomplete="tel" placeholder="Informe seu telefone" required>
+                <label>Telefone</label>
+                <input type="tel" placeholder="Informe seu telefone">
 
-                <label for="cadastro-endereco">Endereço</label>
-                <input id="cadastro-endereco" type="text" autocomplete="street-address" placeholder="Seu endereço completo" required>
+                <label>Endereço</label>
+                <input type="text" placeholder="Seu endereço completo">
 
-                <label for="cadastro-senha">Senha</label>
-                <input id="cadastro-senha" type="password" autocomplete="new-password" placeholder="Sua senha" required>
+                <label>Senha:</label>
+                <input type="password" placeholder="Sua senha">
 
-                <label for="cadastro-confirmar-senha">Confirmar senha</label>
-                <input id="cadastro-confirmar-senha" type="password" autocomplete="new-password" placeholder="Confirme sua senha" required>
+                <label>Confirmar Senha:</label>
+                <input type="password" placeholder="Confirme sua senha">
 
                 <button type="submit" class="cadastrar-log">Cadastrar</button>
                 <button type="button" class="voltar-log">Voltar</button>
             </form>
-        </section>
+        </div>
     `;
 
     document.body.append(...estruturaModal.children);
@@ -146,49 +138,38 @@ function iniciarModalConta() {
     const modalCadastro = document.querySelector(".form-cadas");
     const botaoRegistrar = document.querySelector(".registar-log");
     const botaoVoltar = document.querySelector(".voltar-log");
-    const botoesFechar = document.querySelectorAll(".modal-fechar-login");
-    let elementoAnterior = null;
 
     function ocultarModal(modal) {
-        modal.classList.remove("is-open");
+        modal.style.display = "none";
         modal.setAttribute("aria-hidden", "true");
     }
 
     function exibirModal(modal) {
         ocultarModal(modalLogin);
         ocultarModal(modalCadastro);
-        fundo.classList.add("is-open");
+        fundo.style.display = "flex";
         fundo.setAttribute("aria-hidden", "false");
-        modal.classList.add("is-open");
+        modal.style.display = "flex";
         modal.setAttribute("aria-hidden", "false");
-        document.body.classList.add("modal-aberto");
-
-        requestAnimationFrame(() => {
-            modal.querySelector("input, button")?.focus();
-        });
     }
 
     function fecharModais() {
         ocultarModal(modalLogin);
         ocultarModal(modalCadastro);
-        fundo.classList.remove("is-open");
+        fundo.style.display = "none";
         fundo.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("modal-aberto");
-        elementoAnterior?.focus();
     }
 
     botaoLogin.addEventListener("click", () => {
-        elementoAnterior = document.activeElement;
         exibirModal(modalLogin);
     });
 
     botaoRegistrar.addEventListener("click", () => exibirModal(modalCadastro));
     botaoVoltar.addEventListener("click", () => exibirModal(modalLogin));
     fundo.addEventListener("click", fecharModais);
-    botoesFechar.forEach((botao) => botao.addEventListener("click", fecharModais));
 
     document.addEventListener("keydown", (evento) => {
-        if (evento.key === "Escape" && fundo.classList.contains("is-open")) {
+        if (evento.key === "Escape" && fundo.style.display === "flex") {
             fecharModais();
         }
     });
