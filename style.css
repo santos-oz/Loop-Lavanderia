@@ -1,7 +1,7 @@
 /*
- * Loop Lavanderia — folha de estilos unificada
- * Organização: base compartilhada, componentes globais e páginas isoladas.
- * Cada regra específica está limitada à classe do respectivo <body>.
+ * Loop Lavanderia â€” folha de estilos unificada
+ * OrganizaÃ§Ã£o: base compartilhada, componentes globais e pÃ¡ginas isoladas.
+ * Cada regra especÃ­fica estÃ¡ limitada Ã  classe do respectivo <body>.
  */
 
 /* ==========================================================
@@ -55,7 +55,7 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* O conteúdo destas páginas usa o mesmo fundo da área principal de Agendamento. */
+/* O conteÃºdo destas pÃ¡ginas usa o mesmo fundo da Ã¡rea principal de Agendamento. */
 body.pagina-index .hero,
 body.pagina-como .como-funciona,
 body.pagina-localizacao main {
@@ -63,7 +63,7 @@ body.pagina-localizacao main {
 }
 
 /* ==========================================================
-   2. CABEÇALHO COMPARTILHADO
+   2. CABEÃ‡ALHO COMPARTILHADO
    ========================================================== */
 body[class^="pagina-"] header {
   position: relative;
@@ -320,7 +320,7 @@ body[class^="pagina-"] .menu-toggle {
 }
 
 /* ==========================================================
-   4. RODAPÉ COMPARTILHADO — UMA ÚNICA CONFIGURAÇÃO
+   4. RODAPÃ‰ COMPARTILHADO â€” UMA ÃšNICA CONFIGURAÃ‡ÃƒO
    ========================================================== */
 body[class^="pagina-"] .rodape {
   width: 100%;
@@ -471,7 +471,7 @@ body[class^="pagina-"] .copyright {
 /* ==========================================================
    5. ACABAMENTOS SOLICITADOS
    ========================================================== */
-/* Fundos claros dos ícones recebem cantos arredondados consistentes. */
+/* Fundos claros dos Ã­cones recebem cantos arredondados consistentes. */
 .pagina-index .beneficios .item i,
 .pagina-como .icone,
 .pagina-servicos .icone-servico,
@@ -662,7 +662,7 @@ body[class^="pagina-"] .copyright {
 }
 
 /* ==========================================================
-+   7. PÁGINA INICIAL — ESTILOS-BASE
++   7. PÃGINA INICIAL â€” ESTILOS-BASE
 +   ========================================================== */
 .pagina-index * {
     margin: 0;
@@ -842,7 +842,7 @@ body.pagina-index {
     margin-bottom: 40px;
 }
 
-/* BOTÕES */
+/* BOTÃ•ES */
 
 .pagina-index .botoes {
     display: flex;
@@ -853,10 +853,13 @@ body.pagina-index {
 
 .pagina-index .btn-primario {
     padding: 18px 40px;
+
     border: none;
     border-radius: 15px;
+
     background: #073B4C;
     color: white;
+
     font-size: 20px;
     cursor: pointer;
     transition: .3s;
@@ -868,11 +871,15 @@ body.pagina-index {
 
 .pagina-index .btn-secondario {
     padding: 18px 40px;
+
     border: 2px solid #D4B483;
     border-radius: 15px;
+
     background: transparent;
+
     font-size: 20px;
     color: #073B4C;
+
     cursor: pointer;
     transition: .3s;
 }
@@ -881,10 +888,12 @@ body.pagina-index {
     background: #D4B483;
 }
 
-/* BENEFÍCIOS */
+/* BENEFÃCIOS */
+
 .pagina-index .beneficios {
     display: flex;
     gap: 70px;
+
     margin-bottom: 60px;
 }
 
@@ -911,19 +920,25 @@ body.pagina-index {
 }
 
 /* CARD */
+
 .pagina-index .card-info {
     width: 480px;
     height: 7rem;
+
     display: flex;
     align-items: center;
     gap: 20px;
+
     background: #EFDDBF;
+
     padding: 25px;
+
     border-radius: 20px;
     margin: 0;
     font-size: 20px;
     color: #073B4C;
     margin-left: 5rem;
+
 }
 
 .pagina-index .card-info i {
@@ -931,7 +946,10 @@ body.pagina-index {
     color: #D9923B;
 }
 
+
+
 /* IMAGEM */
+
 .pagina-index .hero-imagem {
     flex: 1;
     border-radius: none;
@@ -942,26 +960,27 @@ body.pagina-index {
     border-radius: 50px;
     object-fit: cover;
     box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
 }
+
 
 /* FOOTER */
 
 .pagina-index .paragrafo1 {
     display: block;
     margin-top: 3rem;
-}
 
+
+}
 .pagina-index .localizacao{
     display: inline-block;
 }
-
 .pagina-index .lavtxt{
     font-size: 30px;
     color: #073B4C;
     margin-left: 5rem;
     margin-top: 3rem;
 }
-
 .pagina-index .card12{
     display: flex;
     justify-content: center;
@@ -975,7 +994,6 @@ body.pagina-index {
     font-size: 20px;
     color: #073B4C;
 }
-
 .pagina-index .card13{
     display: flex;
     justify-content: center;
@@ -991,14 +1009,12 @@ body.pagina-index {
     color: #073B4C;
     margin-bottom: 3rem;
 }
-
 .pagina-index .card13:hover{
     box-shadow: #e2e2e2 1px 2px 8px;
     border: 4px solid #eee1d2;
     transform: scale(1);
     transition: 0.8s;
 }
-
 .pagina-index .card13 i{
     font-size: 40px;
     color: #073B4C;
@@ -1006,30 +1022,31 @@ body.pagina-index {
     padding: auto;
     box-shadow: #156082;
 }
-
 .pagina-index .card13 .linhas{
     display: flex;
+    
 }
-
 .pagina-index .aberto{
     background-color: #dca76663;
     border-radius: 1rem;
     padding: 0.22rem;
     margin-left: 1.2rem;
 }
-
 .pagina-index .fechada{
+
     background-color: #b0b0b0;
     border-radius: 1rem;
     padding: 0.22rem;
     margin-left: 1.2rem;
-}
 
+
+
+    
+}
 .pagina-index .star2{
     font-size: 1rem;
     margin-left: 1rem;
 }
-
 .pagina-index .mapa{
     display: flex;
     justify-content: center;
@@ -1040,6 +1057,7 @@ body.pagina-index {
     width: 100%;
     max-width: 900px;
 }
+
 
 /* RESPONSIVO */
 @media(max-width: 768px) {
@@ -1072,11 +1090,13 @@ body.pagina-index {
 }
 
 /* HEADER */
+
 /* HERO */
 .pagina-index .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 50px 80pxo;
     gap: 50px;
 }
@@ -1085,20 +1105,30 @@ body.pagina-index {
     font-size: 72px;
     color: #073B4C;
     line-height: 1.1;
+
     text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+
     margin-bottom: 30px;
 }
 
-/* BOTÕES */
-/* BENEFÍCIOS */
+/* BOTÃ•ES */
+
+/* BENEFÃCIOS */
+
 /* CARD */
+
+
+
 /* IMAGEM */
+
+
 /* RESPONSIVO */
+
 /* ==========================================================
-+   8. PÁGINA INICIAL — AJUSTES RESPONSIVOS
++   8. PÃGINA INICIAL â€” AJUSTES RESPONSIVOS
 +   ========================================================== */
-/* Ajustes exclusivos da página inicial.
-   Este arquivo mantém o style.css compartilhado intacto. */
+/* Ajustes exclusivos da pÃ¡gina inicial.
+   Este arquivo mantÃ©m o style.css compartilhado intacto. */
 
 .pagina-index .hero-text > p,
 .pagina-index .card-info .paragrafo1 {
@@ -1229,7 +1259,7 @@ body.pagina-index {
     }
 }
 
-/* Revisão responsiva da página inicial */
+/* RevisÃ£o responsiva da pÃ¡gina inicial */
 .pagina-index {
     overflow-x: hidden;
 }
@@ -1323,7 +1353,7 @@ body.pagina-index {
 
 /* Modal de login e cadastro */
 
-/* Rodapé */
+/* RodapÃ© */
 
 @media (max-width: 1200px) {
     .pagina-index .hero {
@@ -1422,7 +1452,7 @@ body.pagina-index {
     }
 }
 
-/* Padronização dos botões das lojas com as demais páginas */
+/* PadronizaÃ§Ã£o dos botÃµes das lojas com as demais pÃ¡ginas */
 
 /* ==========================================================
 +   9. COMO FUNCIONA
@@ -1481,16 +1511,21 @@ body.pagina-como{
 /* PASSOS */
 
 .pagina-como .passos{
-    display:flex;
-    align-items:flex-start;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:20px;
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    align-items:stretch;
+    gap:18px;
     flex:3;
 }
 
 .pagina-como .card{
-    width:180px;
+    width:100%;
+    min-width:0;
+    min-height:410px;
+    padding:30px 18px;
+    border:2px solid #16384A;
+    border-radius:36px;
+    background:#FDF8F3;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -1508,7 +1543,7 @@ body.pagina-como{
 .pagina-como .icone{
     width:120px;
     height:120px;
-    border:2px solid #16384A;
+    border:none;
     border-radius:50%;
     background:#f4eadc;
     display:flex;
@@ -1555,9 +1590,7 @@ body.pagina-como{
 /* SETA */
 
 .pagina-como .seta{
-    display:flex;
-    align-items:center;
-    margin-top:55px;
+    display:none;
 }
 
 .pagina-como .seta i{
@@ -1744,7 +1777,7 @@ body.pagina-como{
 
     .pagina-como .card {
         width: 100%;
-        max-width: 280px;
+        max-width: 360px;
     }
 
     .pagina-como .lateral {
@@ -1801,7 +1834,7 @@ body.pagina-como{
     }
 
     .pagina-como .card {
-        max-width: 340px;
+        max-width: 460px;
     }
 
     .pagina-como .btn-agendar {
@@ -1814,7 +1847,7 @@ body.pagina-como{
 }
 
 /* ==========================================================
-+   10. SERVIÇOS
++   10. SERVIÃ‡OS
 +   ========================================================== */
 .pagina-servicos * { 
      margin: 0; 
@@ -1840,7 +1873,7 @@ body.pagina-servicos{
 
 /* Linha azul */
 
-/* Página ativa */
+/* PÃ¡gina ativa */
 
 /* Perfil */
 
@@ -2145,7 +2178,7 @@ body.pagina-servicos {
 /* Header responsivo padronizado */
 
 /* ==========================================================
-+   11. LAVANDERIAS PRÓXIMAS
++   11. LAVANDERIAS PRÃ“XIMAS
 +   ========================================================== */
 .pagina-localizacao {
     min-width: 0;
@@ -2402,7 +2435,7 @@ body.pagina-agendamento {
 
 /* Linha azul */
 
-/* Página ativa */
+/* PÃ¡gina ativa */
 
 /* Perfil */
 
@@ -2918,7 +2951,7 @@ body.pagina-agendamento {
     }
 }
 
-/* Padronização da página Agendamento com o restante do site */
+/* PadronizaÃ§Ã£o da pÃ¡gina Agendamento com o restante do site */
 
 .pagina-agendamento .titulo {
     color: #0F2D3A;
@@ -3027,12 +3060,12 @@ body.pagina-agendamento {
     }
 }
 
-/* Padronização dos botões das lojas com as demais páginas */
+/* PadronizaÃ§Ã£o dos botÃµes das lojas com as demais pÃ¡ginas */
 
 /* ==========================================================
 +   13. MEUS PEDIDOS
 +   ========================================================== */
-/* Ajustes exclusivos da página Meus pedidos.
+/* Ajustes exclusivos da pÃ¡gina Meus pedidos.
    As classes originais foram preservadas para manter a compatibilidade do projeto. */
 
 .pagina-pedidos {
@@ -3164,10 +3197,6 @@ body.pagina-agendamento {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
-    font-size: 28px;
-    font-weight: 800;
-    line-height: 1;
 }
 
 .pagina-pedidos .logostsa {
@@ -3305,7 +3334,7 @@ body.pagina-agendamento {
 }
 
 /* ==========================================================
-+   14. SOBRE NÓS
++   14. SOBRE NÃ“S
 +   ========================================================== */
 .pagina-sobre *{
     margin:0;
@@ -3318,7 +3347,7 @@ body.pagina-sobre{
     background:#FDF8F3;
 }
 
-/* SOBRE NÓS */
+/* SOBRE NÃ“S */
 
 body.pagina-sobre{
     font-family:Arial, Helvetica, sans-serif;
@@ -3466,7 +3495,7 @@ body.pagina-sobre{
 
 /* Footer */
 
-/* Padronização da página Sobre nós com o restante do site */
+/* PadronizaÃ§Ã£o da pÃ¡gina Sobre nÃ³s com o restante do site */
 .pagina-sobre {
     min-width: 0;
     overflow-x: hidden;
@@ -3480,7 +3509,7 @@ body.pagina-sobre{
     margin-top: 105px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .pagina-sobre .sobre .container {
         flex-direction: column;
         gap: 36px;
@@ -3498,9 +3527,23 @@ body.pagina-sobre{
     .pagina-sobre .sobre-texto p:last-child {
         margin-bottom: 0;
     }
+
+    .pagina-sobre .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 90%;
+        max-width: 650px;
+        gap: 32px;
+    }
+
+    .pagina-sobre .card {
+        width: 100%;
+        max-width: none;
+        min-height: 310px;
+    }
 }
 
-/* Título e parágrafos principais no mesmo tamanho da página inicial. */
+/* TÃ­tulo e parÃ¡grafos principais no mesmo tamanho da pÃ¡gina inicial. */
 .pagina-sobre .sobre-texto h2 {
     font-size: clamp(44px, 5vw, 72px);
     line-height: 1.1;
@@ -3541,8 +3584,8 @@ body.pagina-sobre{
     }
 }
 
-/* Centralização do conteúdo nas telas responsivas */
-@media (max-width: 900px) {
+/* CentralizaÃ§Ã£o do conteÃºdo nas telas responsivas */
+@media (max-width: 1024px) {
     .pagina-sobre .sobre-texto {
         width: 100%;
         max-width: 800px;
@@ -3567,8 +3610,20 @@ body.pagina-sobre{
     }
 }
 
+@media (max-width: 600px) {
+    .pagina-sobre .cards {
+        grid-template-columns: minmax(0, 1fr);
+        max-width: 340px;
+        gap: 26px;
+    }
+
+    .pagina-sobre .card {
+        min-height: 300px;
+    }
+}
+
 /* ==========================================================
-   CORREÇÃO FINAL — PADRONIZAÇÃO DOS MODAIS DE CONTA
+   CORREÃ‡ÃƒO FINAL â€” PADRONIZAÃ‡ÃƒO DOS MODAIS DE CONTA
    Manter este bloco no final do style.css.
    ========================================================== */
 body[class^="pagina-"] .mod-login,
