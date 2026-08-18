@@ -283,9 +283,28 @@ function iniciarAgendamento() {
     const campoEndereco = document.getElementById("endereco");
     const campoObservacoes = document.getElementById("observacoes");
     const mensagemFormulario = document.getElementById("mensagemFormulario");
+    const areaAgendamento = formulario.closest(".agendamento");
+    const cardResumo = areaAgendamento?.querySelector(".resumo");
+    const botaoRevisar = formulario.querySelector(".botao-agendar");
     const botaoConfirmar = document.getElementById("btnConfirmar");
     const modalConfirmacao = document.getElementById("modalConfirmacao");
     const botaoFecharModal = document.getElementById("fecharModal");
+    const camposObrigatorios = [campoData, campoHorario, selectServico, campoEndereco];
+    let resumoLiberado = false;
+
+    formulario.noValidate = true;
+
+    if (cardResumo) {
+        cardResumo.id = "resumoPedido";
+        cardResumo.setAttribute("aria-hidden", "true");
+        cardResumo.setAttribute("tabindex", "-1");
+    }
+
+    if (botaoRevisar) {
+        botaoRevisar.setAttribute("aria-controls", "resumoPedido");
+        botaoRevisar.setAttribute("aria-expanded", "false");
+        botaoRevisar.innerHTML = '<i class="bi bi-arrow-right-circle"></i> Revisar pedido';
+    }
 
     const resumo = {
         servico: document.getElementById("resumoServico"),
@@ -351,7 +370,6 @@ function iniciarAgendamento() {
     }
 
     function validarFormulario() {
-        const camposObrigatorios = [campoData, campoHorario, selectServico, campoEndereco];
         let formularioValido = true;
 
         camposObrigatorios.forEach((campo) => {
@@ -364,6 +382,43 @@ function iniciarAgendamento() {
         });
 
         return formularioValido;
+    }
+
+    function formularioCompleto() {
+        return camposObrigatorios.every((campo) => campo.value.trim());
+    }
+
+    function ocultarResumo() {
+        resumoLiberado = false;
+        areaAgendamento?.classList.remove("resumo-liberado");
+        cardResumo?.classList.remove("resumo-visivel");
+        cardResumo?.setAttribute("aria-hidden", "true");
+        botaoRevisar?.setAttribute("aria-expanded", "false");
+
+        if (botaoRevisar) {
+            botaoRevisar.innerHTML = '<i class="bi bi-arrow-right-circle"></i> Revisar pedido';
+        }
+    }
+
+    function mostrarResumo() {
+        atualizarResumo();
+        resumoLiberado = true;
+        areaAgendamento?.classList.add("resumo-liberado");
+        cardResumo?.classList.add("resumo-visivel");
+        cardResumo?.setAttribute("aria-hidden", "false");
+        botaoRevisar?.setAttribute("aria-expanded", "true");
+
+        if (botaoRevisar) {
+            botaoRevisar.innerHTML = '<i class="bi bi-arrow-clockwise"></i> Atualizar resumo';
+        }
+
+        requestAnimationFrame(() => {
+            if (window.matchMedia("(max-width: 1200px)").matches) {
+                cardResumo?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+
+            cardResumo?.focus({ preventScroll: true });
+        });
     }
 
     function limparCep(cep) {
@@ -414,11 +469,19 @@ function iniciarAgendamento() {
         campo.addEventListener("input", () => {
             removerErro(campo);
             atualizarResumo();
+
+            if (resumoLiberado && !formularioCompleto()) {
+                ocultarResumo();
+            }
         });
 
         campo.addEventListener("change", () => {
             removerErro(campo);
             atualizarResumo();
+
+            if (resumoLiberado && !formularioCompleto()) {
+                ocultarResumo();
+            }
         });
     });
 
@@ -442,10 +505,12 @@ function iniciarAgendamento() {
         if (!validarFormulario()) {
             mensagemFormulario.textContent = "Preencha todos os campos obrigatórios.";
             mensagemFormulario.style.color = "#d9534f";
+            ocultarResumo();
             return;
         }
 
-        mensagemFormulario.textContent = "Formulário válido! Clique em Confirmar Agendamento.";
+        mostrarResumo();
+        mensagemFormulario.textContent = "Resumo pronto! Confira os dados antes de confirmar.";
         mensagemFormulario.style.color = "#198754";
     });
 
@@ -460,6 +525,7 @@ function iniciarAgendamento() {
         formulario.reset();
         mensagemFormulario.textContent = "";
         atualizarResumo();
+        ocultarResumo();
         modalConfirmacao.classList.remove("oculto");
     });
 
@@ -480,7 +546,7 @@ function iniciarAgendamento() {
         }
     });
 
-    document.querySelectorAll(".formulario, .resumo, .planta").forEach((elemento, indice) => {
+    document.querySelectorAll(".formulario, .planta").forEach((elemento, indice) => {
         elemento.animate(
             [{ opacity: 0 }, { opacity: 1 }],
             { duration: 650 + indice * 120, easing: "ease-out" }
