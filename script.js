@@ -413,7 +413,7 @@ function iniciarAgendamento() {
         }
 
         requestAnimationFrame(() => {
-            if (window.matchMedia("(max-width: 1200px)").matches) {
+            if (window.matchMedia("(max-width: 1024px)").matches) {
                 cardResumo?.scrollIntoView({ behavior: "smooth", block: "start" });
             }
 
