@@ -1,8 +1,3 @@
-/*
- * Loop Lavanderia — JavaScript unificado
- * Cada módulo verifica se os elementos da respectiva página existem antes de executar.
- */
-
 document.addEventListener("DOMContentLoaded", () => {
     iniciarMenu();
     iniciarModalConta();
@@ -11,9 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     iniciarAgendamento();
 });
 
-/* ==========================================================
-   1. MENU RESPONSIVO — TODAS AS PÁGINAS
-   ========================================================== */
+/* 1. MENU RESPONSIVO — TODAS AS PÁGINAS */
 function iniciarMenu() {
     const botaoMenu = document.querySelector(".menu-toggle");
     const menuPrincipal = document.querySelector("header nav");
@@ -21,12 +14,12 @@ function iniciarMenu() {
     if (!botaoMenu || !menuPrincipal) {
         return;
     }
-
+    
     function fecharMenu() {
         menuPrincipal.classList.remove("is-open");
         botaoMenu.setAttribute("aria-expanded", "false");
         botaoMenu.setAttribute("aria-label", "Abrir menu");
-
+        
         const icone = botaoMenu.querySelector("i");
         icone?.classList.remove("fa-xmark");
         icone?.classList.add("fa-bars");
@@ -59,9 +52,7 @@ function iniciarMenu() {
     });
 }
 
-/* ==========================================================
-   2. LOGIN E CADASTRO — TODAS AS PÁGINAS
-   ========================================================== */
+/* 2. LOGIN E CADASTRO — TODAS AS PÁGINAS */
 function iniciarModalConta() {
     const perfil = document.querySelector(".perfil");
 
@@ -94,10 +85,8 @@ function iniciarModalConta() {
             <form class="form_login">
                 <label>Email:</label>
                 <input type="email" placeholder="Seu melhor email">
-
                 <label>Senha:</label>
                 <input type="password" placeholder="Sua senha">
-
                 <button type="submit" class="entrar-log">Entrar</button>
                 <button type="button" class="registar-log">Registrar-se</button>
             </form>
@@ -179,9 +168,7 @@ function iniciarModalConta() {
     });
 }
 
-/* ==========================================================
-   3. PÁGINA SERVIÇOS
-   ========================================================== */
+/* 3. PÁGINA SERVIÇOS */
 function iniciarServicos() {
     const cards = document.querySelectorAll(".card-servico");
 
@@ -213,9 +200,7 @@ function iniciarServicos() {
     }
 }
 
-/* ==========================================================
-   4. PÁGINA LAVANDERIAS PRÓXIMAS
-   ========================================================== */
+/* 4. PÁGINA LAVANDERIAS PRÓXIMAS */
 function iniciarLocalizacao() {
     const mapa = document.getElementById("mapag");
 
@@ -255,9 +240,7 @@ function iniciarLocalizacao() {
     });
 }
 
-/* ==========================================================
-   5. PÁGINA AGENDAMENTO
-   ========================================================== */
+/* 5. PÁGINA AGENDAMENTO */
 function iniciarAgendamento() {
     const formulario = document.getElementById("formAgendamento");
 
@@ -461,7 +444,6 @@ function iniciarAgendamento() {
             cep: campoCep.value,
             observacoes: campoObservacoes.value
         };
-
         localStorage.setItem("agendamentoLoop", JSON.stringify(agendamento));
     }
 
@@ -478,7 +460,6 @@ function iniciarAgendamento() {
         campo.addEventListener("change", () => {
             removerErro(campo);
             atualizarResumo();
-
             if (resumoLiberado && !formularioCompleto()) {
                 ocultarResumo();
             }
@@ -487,11 +468,9 @@ function iniciarAgendamento() {
 
     campoCep.addEventListener("input", () => {
         let valor = limparCep(campoCep.value).slice(0, 8);
-
         if (valor.length > 5) {
             valor = valor.replace(/^(\d{5})(\d)/, "$1-$2");
         }
-
         campoCep.value = valor;
         atualizarResumo();
     });
@@ -501,7 +480,6 @@ function iniciarAgendamento() {
     formulario.addEventListener("submit", (evento) => {
         evento.preventDefault();
         mensagemFormulario.textContent = "";
-
         if (!validarFormulario()) {
             mensagemFormulario.textContent = "Preencha todos os campos obrigatórios.";
             mensagemFormulario.style.color = "#d9534f";
