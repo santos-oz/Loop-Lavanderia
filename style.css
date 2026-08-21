@@ -1,12 +1,4 @@
-/*
- * Loop Lavanderia â€” folha de estilos unificada
- * OrganizaÃ§Ã£o: base compartilhada, componentes globais e pÃ¡ginas isoladas.
- * Cada regra especÃ­fica estÃ¡ limitada Ã  classe do respectivo <body>.
- */
-
-/* ==========================================================
-   1. BASE GLOBAL
-   ========================================================== */
+/*  1. Base global */
 :root {
   --cor-fundo: #FDF8F3;
   --cor-fundo-secundario: #F1DEC4;
@@ -55,16 +47,13 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* O conteÃºdo destas pÃ¡ginas usa o mesmo fundo da Ã¡rea principal de Agendamento. */
 body.pagina-index .hero,
 body.pagina-como .como-funciona,
 body.pagina-localizacao main {
   background: var(--cor-fundo);
 }
 
-/* ==========================================================
-   2. CABEÃ‡ALHO COMPARTILHADO
-   ========================================================== */
+/* 2. Cabeçalho */
 body[class^="pagina-"] header {
   position: relative;
   z-index: 100;
@@ -190,9 +179,7 @@ body[class^="pagina-"] .menu-toggle {
   cursor: pointer;
 }
 
-/* ==========================================================
-   3. MODAIS DE LOGIN E CADASTRO
-   ========================================================== */
+/* 3. Modais de Login e Cadastro */
 .fundo-ml {
   position: fixed;
   z-index: 9998;
@@ -319,9 +306,7 @@ body[class^="pagina-"] .menu-toggle {
   background: #0A557385;
 }
 
-/* ==========================================================
-   4. RODAPÃ‰ COMPARTILHADO â€” UMA ÃšNICA CONFIGURAÃ‡ÃƒO
-   ========================================================== */
+/* 4. Rodapé  */
 body[class^="pagina-"] .rodape {
   width: 100%;
   margin-top: auto;
@@ -468,10 +453,7 @@ body[class^="pagina-"] .copyright {
   text-align: center;
 }
 
-/* ==========================================================
-   5. ACABAMENTOS SOLICITADOS
-   ========================================================== */
-/* Fundos claros dos Ã­cones recebem cantos arredondados consistentes. */
+/* 5. Acabamentos */
 .pagina-index .beneficios .item i,
 .pagina-como .icone,
 .pagina-servicos .icone-servico,
@@ -480,9 +462,7 @@ body[class^="pagina-"] .copyright {
   border-radius: 18px;
 }
 
-/* ==========================================================
-   6. RESPONSIVIDADE COMPARTILHADA
-   ========================================================== */
+/* 6. Responsividade */
 @media (max-width: 1080px) {
   body[class^="pagina-"] header {
     grid-template-columns: minmax(0, 1fr) auto auto;
@@ -661,9 +641,7 @@ body[class^="pagina-"] .copyright {
   }
 }
 
-/* ==========================================================
-+   7. PÃGINA INICIAL â€” ESTILOS-BASE
-+   ========================================================== */
+/* 7. Página Inicial */
 .pagina-index * {
     margin: 0;
     padding: 0;
@@ -675,8 +653,7 @@ body.pagina-index {
     background: #FDF8F3;
 }
 
-/* HEADER */
-
+/* Header */
 .pagina-index .npedido{
     font-family: Inder, sans-serif;
     font-size: 30px;
@@ -786,24 +763,22 @@ body.pagina-index {
   }
 
 
-/* HERO */
-
+/* Hero */
 .pagina-index .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 50px 80px;
     gap: 50px;
 }
+
 .pagina-index .hero-pedidos {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-
 }
+
 .pagina-index .stats{
     display: flex;
     flex-direction: column;
@@ -812,6 +787,7 @@ body.pagina-index {
     gap: 30px;
     margin-top: 2rem;
 }
+
 .pagina-index .pedidos1{
     font-size: 50px;
     margin-top: 2rem;
@@ -827,39 +803,30 @@ body.pagina-index {
     font-size: 72px;
     color: #0F2D3A;
     line-height: 1.1;
-
     text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
-
     margin-bottom: 30px;
 }
 
 .pagina-index .hero-text p {
     font-size: 24px;
     color: #6F6F6F;
-
     max-width: 650px;
-
     margin-bottom: 40px;
 }
 
-/* BOTÃ•ES */
-
+/* Botões */
 .pagina-index .botoes {
     display: flex;
     gap: 20px;
-
     margin-bottom: 60px;
 }
 
 .pagina-index .btn-primario {
     padding: 18px 40px;
-
     border: none;
     border-radius: 15px;
-
     background: #073B4C;
     color: white;
-
     font-size: 20px;
     cursor: pointer;
     transition: .3s;
@@ -871,15 +838,11 @@ body.pagina-index {
 
 .pagina-index .btn-secondario {
     padding: 18px 40px;
-
     border: 2px solid #D4B483;
     border-radius: 15px;
-
     background: transparent;
-
     font-size: 20px;
     color: #073B4C;
-
     cursor: pointer;
     transition: .3s;
 }
@@ -888,12 +851,10 @@ body.pagina-index {
     background: #D4B483;
 }
 
-/* BENEFÃCIOS */
-
+/* Beneficios */
 .pagina-index .beneficios {
     display: flex;
     gap: 70px;
-
     margin-bottom: 60px;
 }
 
@@ -909,7 +870,6 @@ body.pagina-index {
 .pagina-index .item i {
     font-size: 55px;
     color: #156082;
-
     margin-bottom: 15px;
 }
 
@@ -919,26 +879,20 @@ body.pagina-index {
     font-weight: 500;
 }
 
-/* CARD */
-
+/* Card */
 .pagina-index .card-info {
     width: 480px;
     height: 7rem;
-
     display: flex;
     align-items: center;
     gap: 20px;
-
     background: #EFDDBF;
-
     padding: 25px;
-
     border-radius: 20px;
     margin: 0;
     font-size: 20px;
     color: #073B4C;
     margin-left: 5rem;
-
 }
 
 .pagina-index .card-info i {
@@ -946,9 +900,7 @@ body.pagina-index {
     color: #D9923B;
 }
 
-
-
-/* IMAGEM */
+/* Imagem */
 
 .pagina-index .hero-imagem {
     flex: 1;
@@ -960,27 +912,26 @@ body.pagina-index {
     border-radius: 50px;
     object-fit: cover;
     box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
-
 }
 
-
-/* FOOTER */
+/* Footer */
 
 .pagina-index .paragrafo1 {
     display: block;
     margin-top: 3rem;
-
-
 }
+
 .pagina-index .localizacao{
     display: inline-block;
 }
+
 .pagina-index .lavtxt{
     font-size: 30px;
     color: #073B4C;
     margin-left: 5rem;
     margin-top: 3rem;
 }
+
 .pagina-index .card12{
     display: flex;
     justify-content: center;
@@ -994,6 +945,7 @@ body.pagina-index {
     font-size: 20px;
     color: #073B4C;
 }
+
 .pagina-index .card13{
     display: flex;
     justify-content: center;
@@ -1009,12 +961,14 @@ body.pagina-index {
     color: #073B4C;
     margin-bottom: 3rem;
 }
+
 .pagina-index .card13:hover{
     box-shadow: #e2e2e2 1px 2px 8px;
     border: 4px solid #eee1d2;
     transform: scale(1);
     transition: 0.8s;
 }
+
 .pagina-index .card13 i{
     font-size: 40px;
     color: #073B4C;
@@ -1022,31 +976,30 @@ body.pagina-index {
     padding: auto;
     box-shadow: #156082;
 }
+
 .pagina-index .card13 .linhas{
     display: flex;
-    
 }
+
 .pagina-index .aberto{
     background-color: #dca76663;
     border-radius: 1rem;
     padding: 0.22rem;
     margin-left: 1.2rem;
 }
-.pagina-index .fechada{
 
+.pagina-index .fechada{
     background-color: #b0b0b0;
     border-radius: 1rem;
     padding: 0.22rem;
     margin-left: 1.2rem;
-
-
-
-    
 }
+
 .pagina-index .star2{
     font-size: 1rem;
     margin-left: 1rem;
 }
+
 .pagina-index .mapa{
     display: flex;
     justify-content: center;
@@ -1058,10 +1011,9 @@ body.pagina-index {
     max-width: 900px;
 }
 
-
-/* RESPONSIVO */
+/* Resposividade */
 @media(max-width: 768px) {
-
+   
     .pagina-index .hero {
         flex-direction: column;
         padding: 30px;
@@ -1083,20 +1035,17 @@ body.pagina-index {
         flex-direction: column;
         align-items: center;
     }
-
+   
     .pagina-index .card-info {
         width: 100%;
     }
 }
 
-/* HEADER */
-
-/* HERO */
+/* Hero */
 .pagina-index .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 50px 80pxo;
     gap: 50px;
 }
@@ -1105,31 +1054,11 @@ body.pagina-index {
     font-size: 72px;
     color: #073B4C;
     line-height: 1.1;
-
     text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
-
     margin-bottom: 30px;
 }
 
-/* BOTÃ•ES */
-
-/* BENEFÃCIOS */
-
-/* CARD */
-
-
-
-/* IMAGEM */
-
-
-/* RESPONSIVO */
-
-/* ==========================================================
-+   8. PÃGINA INICIAL â€” AJUSTES RESPONSIVOS
-+   ========================================================== */
-/* Ajustes exclusivos da pÃ¡gina inicial.
-   Este arquivo mantÃ©m o style.css compartilhado intacto. */
-
+/* 8. Página inicial - Ajustes responsivos*/
 .pagina-index .hero-text > p,
 .pagina-index .card-info .paragrafo1 {
     color: #1C1C1C;
@@ -1190,6 +1119,7 @@ body.pagina-index {
 }
 
 @media (max-width: 900px) {
+   
     .pagina-index .hero {
         flex-direction: column;
         align-items: stretch;
@@ -1213,7 +1143,7 @@ body.pagina-index {
 }
 
 @media (max-width: 768px) {
-
+   
     .pagina-index .hero {
         padding: 36px 24px;
     }
@@ -1259,7 +1189,7 @@ body.pagina-index {
     }
 }
 
-/* RevisÃ£o responsiva da pÃ¡gina inicial */
+/* Revisão Página Inicial */
 .pagina-index {
     overflow-x: hidden;
 }
@@ -1351,11 +1281,10 @@ body.pagina-index {
     min-width: 0;
 }
 
-/* Modal de login e cadastro */
-
-/* RodapÃ© */
+/* Rodapé */
 
 @media (max-width: 1200px) {
+   
     .pagina-index .hero {
         grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
         padding-inline: 42px;
@@ -1369,6 +1298,7 @@ body.pagina-index {
 }
 
 @media (max-width: 1024px) {
+   
     .pagina-index .hero {
         grid-template-columns: minmax(0, 1fr);
         grid-template-areas:
@@ -1411,6 +1341,7 @@ body.pagina-index {
 }
 
 @media (max-width: 640px) {
+   
     .pagina-index .hero {
         gap: 36px;
         padding: 36px 18px 50px;
@@ -1452,11 +1383,7 @@ body.pagina-index {
     }
 }
 
-/* PadronizaÃ§Ã£o dos botÃµes das lojas com as demais pÃ¡ginas */
-
-/* ==========================================================
-+   9. COMO FUNCIONA
-+   ========================================================== */
+/* 9. Como Funciona */
 .pagina-como *{
     margin:0;
     padding:0;
@@ -1468,12 +1395,7 @@ body.pagina-como{
     background:#FDF8F3;
 }
  
-/* HEADER */
-
-
-
-/* SECTION */
-
+/* Section */
 .pagina-como .como-funciona{
     width:90%;
     max-width:1400px;
@@ -1481,8 +1403,7 @@ body.pagina-como{
     padding:70px 0;
 }
 
-/* TITULO */
-
+/* Titulo */
 .pagina-como .titulo{
     text-align:justify;
     font-size:2.9rem;
@@ -1499,8 +1420,7 @@ body.pagina-como{
     font-size: 1.2rem;
 }
 
-/* CONTEUDO */
-
+/* Conteúdo */
 .pagina-como .conteudo{
     display:flex;
     justify-content:space-between;
@@ -1508,8 +1428,7 @@ body.pagina-como{
     gap:50px;
 }
 
-/* PASSOS */
-
+/* Passos */
 .pagina-como .passos{
     display:grid;
     grid-template-columns:repeat(4, minmax(0, 1fr));
@@ -1537,8 +1456,7 @@ body.pagina-como{
     transform:translateY(-10px);
 }
 
-
-/* ICONE */
+/* Icone */
 
 .pagina-como .icone{
     width:120px;
@@ -1556,8 +1474,7 @@ body.pagina-como{
     color:#16384A;
 }
 
-/* NUMERO */
-
+/* Numero */
 .pagina-como .numero{
     width:40px;
     height:40px;
@@ -1571,24 +1488,19 @@ body.pagina-como{
     font-weight:bold;
 }
 
-
-    
-/* TITULO */
-
+/* Titulo */
 .pagina-como .card h3{
     color:#16384A;
     margin-bottom:15px;
     font-size:1.3rem;
 }
 
-/* TEXTO */
-
+/* Texto */
 .pagina-como .card p{
     line-height:1.7;
 }
 
-/* SETA */
-
+/* Sexta */
 .pagina-como .seta{
     display:none;
 }
@@ -1598,8 +1510,7 @@ body.pagina-como{
     color:#16384A;
 }
 
-/* LATERAL */
-
+/* Lateral */
 .pagina-como .lateral{
     flex:1;
     display:flex;
@@ -1635,8 +1546,7 @@ body.pagina-como{
     transform:translateY(-3px);
 }
 
-/* AVISO */
-
+/* Aviso */
 .pagina-como .aviso{
     margin:60px auto 0;
     max-width:700px;
@@ -1657,10 +1567,8 @@ body.pagina-como{
     font-weight: 550;
 }
 
-/* FOOTER */
-
-/* TABLET */
-
+/* Footer */
+/* Tablet */
 @media(max-width:1024px){
 
     .pagina-como .conteudo{
@@ -1673,8 +1581,7 @@ body.pagina-como{
     }
 }
 
-/* CELULAR */
-
+/* Celular */
 @media(max-width:768px){
 
     .pagina-como .como-funciona{
@@ -1731,6 +1638,7 @@ body.pagina-como{
 }
 
 @media(max-width:1024px){
+   
     .pagina-como .como-funciona {
         width: 100%;
         padding: 56px 28px 64px;
@@ -1808,6 +1716,7 @@ body.pagina-como{
 }
 
 @media(max-width:768px){
+   
     .pagina-como .como-funciona {
         padding: 46px 20px 54px;
     }
@@ -1829,6 +1738,7 @@ body.pagina-como{
 }
 
 @media(max-width:560px){
+   
     .pagina-como .passos {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -1846,9 +1756,7 @@ body.pagina-como{
     }
 }
 
-/* ==========================================================
-+   10. SERVIÃ‡OS
-+   ========================================================== */
+/* 10. Serviços */
 .pagina-servicos * { 
      margin: 0; 
      padding: 0; 
@@ -1862,20 +1770,6 @@ body.pagina-servicos{
 body.pagina-servicos{
     background:#FDF8F3;
 }
-
-/* Header */
-
-/* Logo */
-
-/* Menu */
-
-/* Hover */
-
-/* Linha azul */
-
-/* PÃ¡gina ativa */
-
-/* Perfil */
 
 body.pagina-servicos { 
      margin: 0; 
@@ -2071,8 +1965,6 @@ body.pagina-servicos {
      transform: scale(0.98);
 }
 
-/* Footer + frase */
-
 .pagina-servicos .frase-destaque {
     width: 100%;
     background-color: #ffffff;
@@ -2143,14 +2035,11 @@ body.pagina-servicos {
 }
 
 /* Footer */
-
 /* Tablet */
 @media (max-width: 992px) {
-
     .pagina-servicos .grade-servicos {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 /* Celular */
@@ -2175,11 +2064,7 @@ body.pagina-servicos {
 
 }
 
-/* Header responsivo padronizado */
-
-/* ==========================================================
-+   11. LAVANDERIAS PRÃ“XIMAS
-+   ========================================================== */
+/* 11. Lavanderias próximas */
 .pagina-localizacao {
     min-width: 0;
     overflow-x: hidden;
@@ -2412,9 +2297,7 @@ body.pagina-servicos {
     }
 }
 
-/* ==========================================================
-+   12. AGENDAMENTO
-+   ========================================================== */
+/* 12. Agendamento */
 .pagina-agendamento * {
     margin:0;
     padding:0;
@@ -2424,20 +2307,6 @@ body.pagina-servicos {
 body.pagina-agendamento {
     background: #FDF8F3;
 }
-
-/* Header */
-
-/* Logo */
-
-/* Menu */
-
-/* Hover */
-
-/* Linha azul */
-
-/* PÃ¡gina ativa */
-
-/* Perfil */
 
 body.pagina-agendamento {
     font-family:Arial, Helvetica, sans-serif;
@@ -2654,14 +2523,6 @@ body.pagina-agendamento {
     color:#666;
     font-size:15px;
 }
-/*
-.item-resumo strong {
-    flex:1;
-    text-align:right;
-    color:#163547;
-    font-size:15px;
-    word-break:break-word;
-}*/
 
 .pagina-agendamento .item-resumo strong{
     text-align:right;
@@ -2791,6 +2652,7 @@ body.pagina-agendamento {
 
 /* Responvidade */
 @media (max-width:1024px){
+   
     .pagina-agendamento .agendamento,
     .pagina-agendamento .agendamento.resumo-liberado {
         grid-template-columns:1fr;
@@ -2818,6 +2680,7 @@ body.pagina-agendamento {
 }
 
 @media (max-width:720px) {
+   
     .pagina-agendamento .grupo-campos {
         grid-template-columns:1fr;
     }
@@ -2951,8 +2814,7 @@ body.pagina-agendamento {
     }
 }
 
-/* PadronizaÃ§Ã£o da pÃ¡gina Agendamento com o restante do site */
-
+/* Padronização */
 .pagina-agendamento .titulo {
     color: #0F2D3A;
 }
@@ -3060,14 +2922,7 @@ body.pagina-agendamento {
     }
 }
 
-/* PadronizaÃ§Ã£o dos botÃµes das lojas com as demais pÃ¡ginas */
-
-/* ==========================================================
-+   13. MEUS PEDIDOS
-+   ========================================================== */
-/* Ajustes exclusivos da pÃ¡gina Meus pedidos.
-   As classes originais foram preservadas para manter a compatibilidade do projeto. */
-
+/* 13. Meus Pedidos */
 .pagina-pedidos {
     min-width: 0;
     overflow-x: hidden;
@@ -3273,6 +3128,7 @@ body.pagina-agendamento {
 }
 
 @media (max-width: 760px) {
+   
     .pagina-pedidos .conteudo-pedidos {
         min-height: auto;
         padding: 38px 18px 48px;
@@ -3333,9 +3189,7 @@ body.pagina-agendamento {
     }
 }
 
-/* ==========================================================
-+   14. SOBRE NÃ“S
-+   ========================================================== */
+/* 14. Sobre Nós*/
 .pagina-sobre *{
     margin:0;
     padding:0;
@@ -3347,24 +3201,20 @@ body.pagina-sobre{
     background:#FDF8F3;
 }
 
-/* SOBRE NÃ“S */
-
 body.pagina-sobre{
     font-family:Arial, Helvetica, sans-serif;
     background:#F8F2EC;
     color:#16384A;
 }
 
-/* CONTAINER */
-
+/* Container */
 .pagina-sobre .container{
     width:90%;
     max-width:1400px;
     margin:auto;
 }
 
-/* SOBRE */
-
+/* Sobre */
 .pagina-sobre .sobre{
     padding:70px 0;
 }
@@ -3403,8 +3253,7 @@ body.pagina-sobre{
     display:block;
 }
 
-/* DIFERENCIAIS */
-
+/* Diferenciais */
 .pagina-sobre .diferenciais{
     padding:20px 0 80px;
 }
@@ -3419,8 +3268,7 @@ body.pagina-sobre{
     flex-wrap:wrap;
 }
 
-/* CARD */
-
+/* Card*/
 .pagina-sobre .card{
     width:250px;
     min-height:330px;
@@ -3458,7 +3306,7 @@ body.pagina-sobre{
     line-height:1.5;
 }
 
-/* RESPONSIVO */
+/* Responsividade */
 @media(max-width:768px){
 
 .pagina-sobre .sobre{
@@ -3494,8 +3342,6 @@ body.pagina-sobre{
 }
 
 /* Footer */
-
-/* PadronizaÃ§Ã£o da pÃ¡gina Sobre nÃ³s com o restante do site */
 .pagina-sobre {
     min-width: 0;
     overflow-x: hidden;
@@ -3543,7 +3389,7 @@ body.pagina-sobre{
     }
 }
 
-/* TÃ­tulo e parÃ¡grafos principais no mesmo tamanho da pÃ¡gina inicial. */
+/* Ajustes de Responsividade */
 .pagina-sobre .sobre-texto h2 {
     font-size: clamp(44px, 5vw, 72px);
     line-height: 1.1;
@@ -3555,6 +3401,7 @@ body.pagina-sobre{
 }
 
 @media (max-width: 900px) {
+   
     .pagina-sobre .sobre-texto h2 {
         font-size: clamp(42px, 8vw, 60px);
     }
@@ -3565,6 +3412,7 @@ body.pagina-sobre{
 }
 
 @media (max-width: 768px) {
+   
     .pagina-sobre .sobre-texto h2 {
         font-size: clamp(38px, 11vw, 50px);
     }
@@ -3575,6 +3423,7 @@ body.pagina-sobre{
 }
 
 @media (max-width: 520px) {
+   
     .pagina-sobre .sobre-texto h2 {
         font-size: clamp(36px, 11vw, 48px);
     }
@@ -3584,8 +3433,9 @@ body.pagina-sobre{
     }
 }
 
-/* CentralizaÃ§Ã£o do conteÃºdo nas telas responsivas */
+/* Centralização do conteúdo nas telas responsivas */
 @media (max-width: 1024px) {
+   
     .pagina-sobre .sobre-texto {
         width: 100%;
         max-width: 800px;
@@ -3611,6 +3461,7 @@ body.pagina-sobre{
 }
 
 @media (max-width: 600px) {
+   
     .pagina-sobre .cards {
         grid-template-columns: minmax(0, 1fr);
         max-width: 340px;
@@ -3622,10 +3473,7 @@ body.pagina-sobre{
     }
 }
 
-/* ==========================================================
-   CORREÃ‡ÃƒO FINAL â€” PADRONIZAÃ‡ÃƒO DOS MODAIS DE CONTA
-   Manter este bloco no final do style.css.
-   ========================================================== */
+/* Correções */
 body[class^="pagina-"] .mod-login,
 body[class^="pagina-"] .form-cadas {
     width: 30rem;
@@ -3715,6 +3563,7 @@ body[class^="pagina-"] .form_login .registar-log:hover {
 }
 
 @media (max-width: 520px) {
+   
     body[class^="pagina-"] .mod-login,
     body[class^="pagina-"] .form-cadas {
         padding: 24px 20px;
